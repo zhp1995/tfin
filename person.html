@@ -1,0 +1,1754 @@
+﻿<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>个人中心</title>
+		<link rel="stylesheet" type="text/css" href="bootstrap3.2.0/front/css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/front/index.css" />
+		<link rel="stylesheet" type="text/css" href="css/front/common.css" />
+		<link rel="stylesheet" type="text/css" href="css/front/person.css" />
+		<script src="bootstrap3.2.0/front/js/jquery-1.11.0.min.js"></script>
+		<script src="bootstrap3.2.0/front/js/bootstrap.js"></script>
+		<script src="js/front/common.js"></script>
+	</head>
+
+	<body>
+		<div id="setwrap">
+		<!--header start-->
+		<header>
+			<nav class="navbar-inverse" id="_nav">
+				<div class="container">
+					<div class="navbar-header">
+						<button class="navbar-toggle" data-toggle="collapse" data-target="#responsive-navbar">				
+						<span class="icon-bar"></span>  
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>	
+					</button>
+						<a href="#" class="navbar-brand" id="_logo"><img src="img/front/_logo.png" /></a>
+						<a href="#" class="navbar-brand" id="_tfin">tfin阅读</a>
+					</div>
+
+					<div class="collapse navbar-collapse " id="responsive-navbar">
+						<select class="navbar-form navbar-left" id="nav-select">
+							<option value="xinwen">新闻</option>
+						</select>
+						<form action="" class="navbar-form navbar-left" id="search-form">
+							<input type="text" placeholder="搜索" class="form-control" />
+							<button type="submit" onclick="window.open('search.html')">
+						<span class="glyphicon glyphicon-search"></span>
+					</button>
+						</form>
+
+						<div class="profile navbar-right">
+							<ul class="nav navbar-nav" id="right-menu">
+								<li class="person-img">
+									<img src="img/front/person/touxiang.jpg"/>
+								</li>
+								<li>
+									<a href="index.html">返回首页</a>
+								</li>
+								<li>
+									<a href="login.html">退出</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</nav>
+		</header>
+		<!--header end-->
+
+		<!--person-info start-->
+		<div id="person-info">
+			<div id="person-bg"></div>
+			<div class="container">
+				<div class="row" id="row-positive">
+					<div class="col-md-3 col-sm-4 " >
+						<img class="img-responsive per-img" id="per-img" src="img/front/person/touxiang.jpg" title="修改头像" alt="这是一张图片">
+						<p class="name">Hui</p>
+					</div>
+					<div class="col-md-5 col-sm-4 per-txt">
+						<p id="firs-txt">Hello,
+							<span id="per-name">Hui</span> ,欢迎来到tfin阅读！
+						</p>
+						<!--<hr>-->
+						<p>最高学历：
+							<span id="education">本科生</span>
+						</p>
+						<p>工作年限：
+							<span id="worktime">应届毕业生</span>
+						</p>
+						<p>期望职位：
+							<span id="job">网络工程师</span>
+						</p>
+						<p>
+							<span class="icon-signa" onclick=""><img src="img/front/person/signature.png"></span>个性签名：
+							<span id="label">路在脚下，一路前行，一路欣赏……</span>
+						</p>
+					</div>
+					<div class="col-md-4 col-sm-4 ">
+						<div class="tip">
+							<a href="#"><img src="img/front/person/完善个人信息.png" /></a><br />
+							<a href="#" class="icon-signa" onclick="showDiv()"><img src="img/front/person/signature.png">个人信息</a>
+							<div class="userinfo">
+								<form>
+									<p><label>昵称：</label><input type="text" name="education " value=" " /></p>
+									<p><label>性别：</label>
+										<span>
+											<input type="radio" name="gender"/>男
+											<input type="radio" name="gender" />女
+										</span>
+									</p>
+									<p><label>最高学历：</label>
+										<select>
+											<option value="boshi">博士</option>
+											<option value="boshi">研究生</option>
+											<option value="boshi">本科</option>
+											<option value="boshi">大专</option>
+										</select>
+									</p>
+									<p><label>工作年限：</label>
+										<select>
+											<option value="yingjie">应届毕业生</option>
+											<option value="oneyear">一年</option>
+											<option value="twoyears">两年</option>
+											<option value="threeyears">三年</option>
+										</select>
+									</p>
+									<p><label>期望职位：</label><input type="text" value="网络工程师" /></p>
+									<p><label>职位类型：</label>
+										<select>
+											<option value="sheji">设计狮</option>
+											<option value="cehua">策划喵</option>
+											<option value="yunying">运营狗</option>
+											<option value="other">其他</option>
+										</select>
+									</p>
+									<p><label>期望月薪：</label>
+										<select>
+											<option value="yingjie">7K以上</option>
+											<option value="oneyear">6K-7k以上</option>
+											<option value="twoyears">5K-6k以上</option>
+											<option value="threeyears">4K-5k以上</option>
+											<option value="threeyears">4K以下</option>
+										</select>
+									</p>
+									<p><label>个性签名：</label>
+										<input type="text" placeholder="路在脚下，一路前行，一路欣赏……" name="personalsign" />
+									</p>
+									<p class="photo">
+										<label>上传头像：</label>
+										<input type="file" name="picture" /></p>
+									<p>
+										<button class="form-btn" id="preserve" type="submit">保存</button>
+										<button class="form-btn" id="close" type="" ">关闭</button>
+									</p>
+								</form>
+								<script>
+									$(function() {
+										$('.icon-signa').click(function() {
+											$('.userinfo').css('display', 'block');
+										});
+										$('#preserve,#close').click(function() {
+											$('.userinfo').css('display', 'none');
+										});
+
+									});
+								</script>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="setting-perimg" id="setting-perimg">
+				<p class="setting-perimg-title"><b>头像设置</b></p>
+				<div class="pass-portrait-openimg">
+					<div class=" selected-img"> 
+						<img src="img/front/person/touxiang.jpg" />
+					</div>
+					<div class="pass-portrait-text">
+						<span class="pass-portrait-msg">支持格式：jpg、jpeg、gif、png、bmp</span><br />
+						<p class="pass-portrait-input" id="pass-portrait-input">
+							<input type="button" class="pass-portrait-filebtn" name="openImgBtn" id="openImgBtn" value="选择图片">
+							<input type="file" class="pass-portrait-file" name="file" id="fileImg">
+						</p>
+						<div class="pass-portrait-save " id="pass-portrait-save">
+							<input type="button" value="保存头像" class="pass-portrait-savebtn" id="savePortrait">&nbsp;
+							<input type="button" value="重新选择" class="pass-portrait-cancelbtn" id="passPortraitRechoicebtn">
+							<input type="file" class="pass-portrait-refile" name="file" id="fileReImg">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script>
+			$('.pass-portrait-file').hover(function(){
+				$('.pass-portrait-filebtn').css({'background-color':'#E0E0E0'});
+					},function(){
+						$('.pass-portrait-filebtn').css('background-color','#F8F8F8');
+			});
+			$('.pass-portrait-refile').hover(function(){
+				$('.pass-portrait-cancelbtn').css({'background-color':'#E0E0E0'});
+					},function(){
+						$('.pass-portrait-cancelbtn').css('background-color','#F8F8F8');
+			});	
+			$('#per-img').click(function(){
+				$('#setting-perimg').css('display','block');
+			});
+			$('#fileImg').click(function(){
+				$('#pass-portrait-input').css('display','none');
+				$('#pass-portrait-save').css('display','block');
+			});
+		</script>
+		<!--person-info end-->
+
+		<!--main start-->
+		<div id="main">
+			<div class="container">
+				<div class="row">
+					<!--左栏	-->
+					<div class="col-md-8 col-sm-9 side-left">
+						<ul id="menu">
+							<li class="subnav-active">推荐</li>
+							<li>策划</li>
+							<li>设计</li>
+							<li>运营</li>
+							<li>我的订阅</li>
+							<li>我的收藏</li>
+							<li>我的笔记</li>
+							<li>网络</li>
+							<li>开发</li>
+							<li>其他</li>
+							<span class="menu-btn" id="menu-Btn"></span>
+							<script>
+								if($('#menu li').length > 8) {
+									$('.menu-btn').css('display', 'block');
+									var i = 0;
+									$('#menu-Btn').click(function() {
+										if(i % 2 == 0) {
+											$('#menu').css({
+												'height': '76px',
+												'overflow': 'visible'
+											});
+											$('.menu-btn').css('background', 'url(img/front/person/close.png) no-repeat');
+										} else {
+											$('#menu').css({
+												'height': '38px',
+												'overflow': 'hidden'
+											});
+											$('.menu-btn').css('background', 'url(img/front/person/show.png) no-repeat');
+										}
+										i++;
+									});
+								}
+							</script>
+						</ul>
+						<!--推荐-->
+						<div class="main-section" id="tuijain" style="display: block;">
+							<!--one-->
+							<div class="section-h">
+								<div class="row subscribetype">
+									<div class="col-md-12 col-sm-12">
+										<div class="_icon"><img src="img/front/person/w.png" /></div>
+										<div class="_icontxt">
+											<span><b>互联网的那些事</b></span><br />
+											<span>互联网的各种事件</span>
+										</div>
+										<div class="icnList">
+											<span class="subnum">24136万人订阅</span>
+											<span class="subscribe" title="添加订阅">订阅</span>
+										</div>
+									</div>
+								</div>
+								<div class="row sections ">
+									<div class="col-md-12 col-sm-12">
+										<div class="row artical-box">
+											<div class="col-md-4 col-sm-4 artical">
+												<div style="position: relative;">
+													<a class="db" href="" target="_blank">
+														<img src="img/front/person/42.jpg" alt="" title="" />
+													</a>
+													<span class="mgzTitleBg" style="width: ;">&nbsp;</span>
+													<span class="mgzTitleText" style="width: ;"><b>VR时代的到来</b></span>
+												</div>	
+												<h1>
+													<a href="" title="Google为 iOS平台推出了一款专属应用!" target="_blank">Google为 iOS平台推出了...</a>
+												</h1>
+												<p>应用图标Motion Stills，其主要功能是：通过与 iPhone上的Live Photos功能相结e上的Live Photos功能相结合</p>
+												<div class="artical-info">
+													<span class="read" title="浏览数">35</span>
+													<span class="collect" title="收藏">12</span>
+													<span class="favor" title="点赞">12</span>
+												</div>
+											</div>
+											<div class="col-md-4 col-sm-4 artical">
+												<div style="position: relative;">
+													<a class="db" href="" target="_blank">
+														<img src="img/front/person/41.jpg" alt="" title="" />
+													</a>
+													<span class="mgzTitleBg" style="width: ;">&nbsp;</span>
+													<span class="mgzTitleText" style="width: ;"><b>VR时代的到来</b></span>
+												</div>
+												<h1>
+											    	<a href="" title="" target="_blank">拥抱还是远离“VR”，这道高考题该怎么答</a>
+												</h1>
+												<p>虚拟现实是用计算机技术模拟的真实或想象的世界，在这个世界里，人是实际存在的...</p>
+												<div class="artical-info">
+													<span class="read" title="浏览数">35</span>
+													<span class="collect" title="收藏">12</span>
+													<span class="favor" title="点赞">12</span>
+												</div>
+											</div>
+											<div class="col-md-4 col-sm-4 artical">
+												<div style="position: relative;">
+													<a class="db" href="" target="_blank">
+														<img src="img/front/person/43.jpg" alt="" title="" />
+													</a>
+													<span class="mgzTitleBg" style="width: ;">&nbsp;</span>
+													<span class="mgzTitleText" style="width: ;"><b>努比亚 Z11 Max 发布</b></span>
+												</div>
+												<h1>
+													<a href="" title="" target="_blank">努比亚 Z11 Max 发布：这是一台 C 罗代言的”Max“</a>
+												</h1>
+												<p>苹果在三月份发布了 iPhone SE 后，曾经刮起了一股小屏手机的风潮...</p>
+												<div class="artical-info">
+													<span class="read" title="浏览数">35</span>
+													<span class="collect" title="收藏">12</span>
+													<span class="favor" title="点赞">12</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!--two-->
+							<div class="section-h">
+								<div class="row">
+									<div class="col-md-12 col-sm-12">
+										<div class="_icon"><img src="img/front/person/d.png" /></div>
+										<div class="_icontxt">
+											<span><b>腾讯ISUX</b></span><br />
+											<span>tencent的先进科学技术分享</span>
+										</div>
+										<div class="icnList">
+											<span class="subnum">24136万人订阅</span>
+											<span class="subscribe" title="添加订阅">订阅</span>
+
+										</div>
+									</div>
+								</div>
+								<div class="sections">
+									<div class="row artical-box">
+											<div class="col-md-4 col-sm-4 artical">
+												<div style="position: relative;">
+													<a class="db" href="" target="_blank">
+														<img src="img/front/person/42.jpg" alt="" title="" />
+													</a>
+													<span class="mgzTitleBg" style="width: ;">&nbsp;</span>
+													<span class="mgzTitleText" style="width: ;"><b>VR时代的到来</b></span>
+												</div>	
+												<h1>
+													<a href="" title="Google为 iOS平台推出了一款专属应用!" target="_blank">Google为 iOS平台推出了...</a>
+												</h1>
+												<p>应用图标Motion Stills，其主要功能是：通过与 iPhone上的Live Photos功能相结e上的Live Photos功能相结合</p>
+												<div class="artical-info">
+													<span class="read" title="浏览数">35</span>
+													<span class="collect" title="收藏">12</span>
+													<span class="favor" title="点赞">12</span>
+												</div>
+											</div>
+											<div class="col-md-4 col-sm-4 artical">
+												<div style="position: relative;">
+													<a class="db" href="" target="_blank">
+														<img src="img/front/person/41.jpg" alt="" title="" />
+													</a>
+													<span class="mgzTitleBg" style="width: ;">&nbsp;</span>
+													<span class="mgzTitleText" style="width: ;"><b>VR时代的到来</b></span>
+												</div>
+												<h1>
+											    	<a href="" title="" target="_blank">拥抱还是远离“VR”，这道高考题该怎么答</a>
+												</h1>
+												<p>虚拟现实是用计算机技术模拟的真实或想象的世界，在这个世界里，人是实际存在的...</p>
+												<div class="artical-info">
+													<span class="read" title="浏览数">35</span>
+													<span class="collect" title="收藏">12</span>
+													<span class="favor" title="点赞">12</span>
+												</div>
+											</div>
+											<div class="col-md-4 col-sm-4 artical">
+												<div style="position: relative;">
+													<a class="db" href="" target="_blank">
+														<img src="img/front/person/43.jpg" alt="" title="" />
+													</a>
+													<span class="mgzTitleBg" style="width: ;">&nbsp;</span>
+													<span class="mgzTitleText" style="width: ;"><b>努比亚 Z11 Max 发布</b></span>
+												</div>
+												<h1>
+													<a href="" title="" target="_blank">努比亚 Z11 Max 发布：这是一台 C 罗代言的”Max“</a>
+												</h1>
+												<p>苹果在三月份发布了 iPhone SE 后，曾经刮起了一股小屏手机的风潮...</p>
+												<div class="artical-info">
+													<span class="read" title="浏览数">35</span>
+													<span class="collect" title="收藏">12</span>
+													<span class="favor" title="点赞">12</span>
+												</div>
+											</div>
+										</div>
+								</div>
+							</div>
+
+							<!--three-->
+							<div class="section-h">
+								<div class="row">
+									<div class="col-md-12 col-sm-12">
+										<div class="_icon"><img src="img/front/person/y.png" /></div>
+										<div class="_icontxt">
+											<span><b>网易用户体验中心</b></span><br />
+											<span>创造最适合目标人阅读的新闻、评论、观点</span>
+										</div>
+										<div class="icnList">
+											<span class="subnum">24136万人订阅</span>
+											<span class="subscribe" title="添加订阅">订阅</span>
+
+										</div>
+									</div>
+								</div>
+								<div class="sections">
+									<div class="row artical-box">
+											<div class="col-md-4 col-sm-4 artical">
+												<div style="position: relative;">
+													<a class="db" href="" target="_blank">
+														<img src="img/front/person/42.jpg" alt="" title="" />
+													</a>
+													<span class="mgzTitleBg" style="width: ;">&nbsp;</span>
+													<span class="mgzTitleText" style="width: ;"><b>VR时代的到来</b></span>
+												</div>	
+												<h1>
+													<a href="" title="Google为 iOS平台推出了一款专属应用!" target="_blank">Google为 iOS平台推出了...</a>
+												</h1>
+												<p>应用图标Motion Stills，其主要功能是：通过与 iPhone上的Live Photos功能相结e上的Live Photos功能相结合</p>
+												<div class="artical-info">
+													<span class="read" title="浏览数">35</span>
+													<span class="collect" title="收藏">12</span>
+													<span class="favor" title="点赞">12</span>
+												</div>
+											</div>
+											<div class="col-md-4 col-sm-4 artical">
+												<div style="position: relative;">
+													<a class="db" href="" target="_blank">
+														<img src="img/front/person/41.jpg" alt="" title="" />
+													</a>
+													<span class="mgzTitleBg" style="width: ;">&nbsp;</span>
+													<span class="mgzTitleText" style="width: ;"><b>VR时代的到来</b></span>
+												</div>
+												<h1>
+											    	<a href="" title="" target="_blank">拥抱还是远离“VR”，这道高考题该怎么答</a>
+												</h1>
+												<p>虚拟现实是用计算机技术模拟的真实或想象的世界，在这个世界里，人是实际存在的...</p>
+												<div class="artical-info">
+													<span class="read" title="浏览数">35</span>
+													<span class="collect" title="收藏">12</span>
+													<span class="favor" title="点赞">12</span>
+												</div>
+											</div>
+											<div class="col-md-4 col-sm-4 artical">
+												<div style="position: relative;">
+													<a class="db" href="" target="_blank">
+														<img src="img/front/person/43.jpg" alt="" title="" />
+													</a>
+													<span class="mgzTitleBg" style="width: ;">&nbsp;</span>
+													<span class="mgzTitleText" style="width: ;"><b>努比亚 Z11 Max 发布</b></span>
+												</div>
+												<h1>
+													<a href="" title="" target="_blank">努比亚 Z11 Max 发布：这是一台 C 罗代言的”Max“</a>
+												</h1>
+												<p>苹果在三月份发布了 iPhone SE 后，曾经刮起了一股小屏手机的风潮...</p>
+												<div class="artical-info">
+													<span class="read" title="浏览数">35</span>
+													<span class="collect" title="收藏">12</span>
+													<span class="favor" title="点赞">12</span>
+												</div>
+											</div>
+										</div>
+								</div>
+							</div>
+						</div>
+						<!--策划-->
+						<div class="main-section" id="cehua" style="display: none;">
+							<!--one-->
+							<div class="section-h">
+								<div class="row subscribetype">
+									<div class="col-md-12 col-sm-12">
+										<div class="_icon"><img src="img/front/person/k.png" /></div>
+										<div class="_icontxt">
+											<span><b>爱范儿</b></span><br />
+											<span>发现创新价值的科技媒体</span>
+										</div>
+										<div class="icnList">
+											<span class="subnum">24136万人订阅</span>
+											<span class="subscribe" title="添加订阅">订阅</span>
+
+										</div>
+									</div>
+								</div>
+								<div class="sections">
+									<div class="row artical-box">
+										<div class="col-md-4 col-sm-4 artical">
+											<div style="position: relative;">
+												<a class="db" href="" target="_blank">
+												<img src="img/front/person/44.jpg" alt="" title="" />
+												</a>
+												<span class="mgzTitleBg" style="width: ;">&nbsp;</span>
+													<span class="mgzTitleText" style="width: ;"><b>VR时代的到来</b></span>
+												</div>
+													<h1>
+													<a href="" title="Google为 iOS平台推出了一款专属应用!" target="_blank">Google为 iOS平台推出了...</a>
+												</h1>
+											<p>应用图标Motion Stills，其主要功能是：通过与 iPhone上的Live Photos功能相结合...</p>
+											<div class="artical-info">
+												<span class="read" title="浏览数">35</span>
+												<span class="collect" title="收藏">12</span>
+												<span class="favor" title="点赞">12</span>
+											</div>
+										</div>
+										<div class="col-md-4 col-sm-4 artical">
+											<div style="position: relative;">
+												<a class="db" href="" target="_blank">
+												<img src="img/front/person/44.jpg" alt="" title="" />
+												</a>
+												<span class="mgzTitleBg" style="width: ;">&nbsp;</span>
+													<span class="mgzTitleText" style="width: ;"><b>VR时代的到来</b></span>
+											</div>
+											<h1>
+											    	<a href="" title="" target="_blank">拥抱还是远离“VR”，这道高考题该怎么答</a>
+												</h1>
+											<p>虚拟现实是用计算机技术模拟的真实或想象的世界，在这个世界里，人是实际存在的...</p>
+											<div class="artical-info">
+												<span class="read" title="浏览数">35</span>
+												<span class="collect" title="收藏">12</span>
+												<span class="favor" title="点赞">12</span>
+											</div>
+										</div>
+										<div class="col-md-4 col-sm-4 artical">
+											<div style="position: relative;">
+												<a class="db" href="" target="_blank">
+												<img src="img/front/person/46.jpg" alt="" title="" />
+												</a>
+												<span class="mgzTitleBg" style="width: ;">&nbsp;</span>
+													<span class="mgzTitleText" style="width: ;"><b>VR时代的到来</b></span>
+											</div>
+											<h1>
+													<a href="" title="" target="_blank">努比亚 Z11 Max 发布：这是一台 C 罗代言的”Max“</a>
+												</h1>
+											<p>苹果在三月份发布了 iPhone SE 后，曾经刮起了一股小屏手机的风潮...</p>
+											<div class="artical-info">
+												<span class="read" title="浏览数">35</span>
+												<span class="collect" title="收藏">12</span>
+												<span class="favor" title="点赞">12</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!--two-->
+							<div class="section-h">
+								<div class="row">
+									<div class="col-md-12 col-sm-12">
+										<div class="_icon"><img src="img/front/person/i.jpg" /></div>
+										<div class="_icontxt">
+											<span><b>伯乐在线</b></span><br />
+											<span>职业相关的博客文章、业界资讯</span>
+										</div>
+										<div class="icnList">
+											<span class="subnum">24136万人订阅</span>
+											<span class="subscribe" title="添加订阅">订阅</span>
+
+										</div>
+									</div>
+								</div>
+								<div class="sections">
+									<div class="row artical-box">
+										<div class="col-md-4 col-sm-4 artical">
+											<div style="position: relative;">
+												<a class="db" href="" target="_blank">
+												<img src="img/front/person/41.jpg" alt="" title="" />
+												</a>
+												<span class="mgzTitleBg" style="width: ;">&nbsp;</span>
+													<span class="mgzTitleText" style="width: ;"><b>Motion Stills</b></span>
+											</div>
+											<h1>
+															<a href="" title="Google为 iOS平台推出了一款专属应用!" target="_blank">Google为 iOS平台推出了...</a>
+														</h1>
+											<p>应用图标Motion Stills，其主要功能是：通过与 iPhone上的Live Photos功能相结合...</p>
+											<div class="artical-info">
+												<span class="read" title="浏览数">35</span>
+												<span class="collect" title="收藏">12</span>
+												<span class="favor" title="点赞">12</span>
+											</div>
+										</div>
+										<div class="col-md-4 col-sm-4 artical">
+											<div style="position: relative;">
+												<a class="db" href="" target="_blank">
+												<img src="img/front/person/46.jpg" alt="" title="" />
+												</a>
+												<span class="mgzTitleBg" style="width: ;">&nbsp;</span>
+													<span class="mgzTitleText" style="width: ;"><b>Motion Stills</b></span>
+											</div>
+											<h1>
+														<a href="" title="" target="_blank">拥抱还是远离“VR”，这道高考题该怎么答</a>
+													</h1>
+											<p>虚拟现实是用计算机技术模拟的真实或想象的世界，在这个世界里，人是实际存在的...</p>
+											<div class="artical-info">
+												<span class="read" title="浏览数">35</span>
+												<span class="collect" title="收藏">12</span>
+												<span class="favor" title="点赞">12</span>
+											</div>
+										</div>
+										<div class="col-md-4 col-sm-4 artical">
+											<div style="position: relative;">
+												<a class="db" href="" target="_blank">
+												<img src="img/front/person/43.jpg" alt="" title="" />
+												</a>
+												<span class="mgzTitleBg" style="width: ;">&nbsp;</span>
+													<span class="mgzTitleText" style="width: ;"><b>Motion Stills</b></span>
+											</div>
+											<h1>
+														<a href="" title="" target="_blank">努比亚 Z11 Max 发布：这是一台 C 罗代言的”Max“</a>
+													</h1>
+											<p>苹果在三月份发布了 iPhone SE 后，曾经刮起了一股小屏手机的风潮...</p>
+											<div class="artical-info">
+												<span class="read" title="浏览数">35</span>
+												<span class="collect" title="收藏">12</span>
+												<span class="favor" title="点赞">12</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!--three-->
+							<div class="section-h">
+								<div class="row">
+									<div class="col-md-12 col-sm-12">
+										<div class="_icon"><img src="img/front/person/n.jpg" /></div>
+										<div class="_icontxt">
+											<span><b>ITeye</b></span><br />
+											<span>移动开发，WEB前端开发，企业架构等开发技术</span>
+										</div>
+										<div class="icnList">
+											<span class="subnum">24136万人订阅</span>
+											<span class="subscribe" title="添加订阅">订阅</span>
+
+										</div>
+									</div>
+								</div>
+								<div class="sections">
+									<div class="row artical-box">
+										<div class="col-md-4 col-sm-4 artical">
+											<div style="position: relative;">
+												<a class="db" href="" target="_blank">
+												<img src="img/front/person/47.jpg" alt="" title="" />
+												</a>
+												<span class="mgzTitleBg" style="width: ;">&nbsp;</span>
+													<span class="mgzTitleText" style="width: ;"><b>Motion Stills</b></span>
+											</div>
+											<h1>
+													<a href="" title="Google为 iOS平台推出了一款专属应用!" target="_blank">Google为 iOS平台推出了...</a>
+												</h1>
+											<p>应用图标Motion Stills，其主要功能是：通过与 iPhone上的Live Photos功能相结合...</p>
+											<div class="artical-info">
+												<span class="read" title="浏览数">35</span>
+												<span class="collect" title="收藏">12</span>
+												<span class="favor" title="点赞">12</span>
+											</div>
+										</div>
+										<div class="col-md-4 col-sm-4 artical">
+											<div style="position: relative;">
+												<a class="db" href="" target="_blank">
+												<img src="img/front/person/48.jpg" alt="" title="" />
+												</a>
+												<span class="mgzTitleBg" style="width: ;">&nbsp;</span>
+													<span class="mgzTitleText" style="width: ;"><b>Motion Stills</b></span>
+											</div>
+											<h1>
+													<a href="" title="" target="_blank">拥抱还是远离“VR”，这道高考题该怎么答</a>
+												</h1>
+											<p>虚拟现实是用计算机技术模拟的真实或想象的世界，在这个世界里，人是实际存在的...</p>
+											<div class="artical-info">
+												<span class="read" title="浏览数">35</span>
+												<span class="collect" title="收藏">12</span>
+												<span class="favor" title="点赞">12</span>
+											</div>
+										</div>
+										<div class="col-md-4 col-sm-4 artical">
+											<div style="position: relative;">
+												<a class="db" href="" target="_blank">
+												<img src="img/front/person/43.jpg" alt="" title="" />
+												</a>
+												<span class="mgzTitleBg" style="width: ;">&nbsp;</span>
+													<span class="mgzTitleText" style="width: ;"><b>努比亚 Z11 Max 发布</b></span>
+											</div>
+											<h1>
+													<a href="" title="" target="_blank">努比亚 Z11 Max 发布：这是一台 C 罗代言的”Max“</a>
+												</h1>
+											<p>苹果在三月份发布了 iPhone SE 后，曾经刮起了一股小屏手机的风潮...</p>
+											<div class="artical-info">
+												<span class="read" title="浏览数">35</span>
+												<span class="collect" title="收藏">12</span>
+												<span class="favor" title="点赞">12</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--设计-->
+						<div class="main-section" id="sheji" style="display: none;">
+							<!--one-->
+							<div class="section-h">
+								<div class="row subscribetype">
+									<div class="col-md-12 col-sm-12">
+										<div class="_icon"><img src="img/front/person/w.png" /></div>
+										<div class="_icontxt">
+											<span><b>互联网的那些事</b></span><br />
+											<span>互联网的各种事件</span>
+										</div>
+										<div class="icnList">
+											<span class="subnum">24136万人订阅</span>
+											<span class="subscribe" title="添加订阅">订阅</span>
+										</div>
+									</div>
+								</div>
+								<div class="row sections ">
+									<div class="col-md-12 col-sm-12">
+										<div class="row artical-box">
+											<div class="col-md-4 col-sm-4 artical">
+												<div style="position: relative;">
+													<a class="db" href="" target="_blank">
+														<img src="img/front/person/46.jpg" alt="" title="" />
+													</a>
+													<span class="mgzTitleBg" style="width: ;">&nbsp;</span>
+													<span class="mgzTitleText" style="width: ;"><b>VR时代的到来</b></span>
+												</div>	
+												<h1>
+													<a href="" title="Google为 iOS平台推出了一款专属应用!" target="_blank">Google为 iOS平台推出了...</a>
+												</h1>
+												<p>应用图标Motion Stills，其主要功能是：通过与 iPhone上的Live Photos功能相结e上的Live Photos功能相结合</p>
+												<div class="artical-info">
+													<span class="read" title="浏览数">35</span>
+													<span class="collect" title="收藏">12</span>
+													<span class="favor" title="点赞">12</span>
+												</div>
+											</div>
+											<div class="col-md-4 col-sm-4 artical">
+												<div style="position: relative;">
+													<a class="db" href="" target="_blank">
+														<img src="img/front/person/41.jpg" alt="" title="" />
+													</a>
+													<span class="mgzTitleBg" style="width: ;">&nbsp;</span>
+													<span class="mgzTitleText" style="width: ;"><b>VR时代的到来</b></span>
+												</div>
+												<h1>
+											    	<a href="" title="" target="_blank">拥抱还是远离“VR”，这道高考题该怎么答</a>
+												</h1>
+												<p>虚拟现实是用计算机技术模拟的真实或想象的世界，在这个世界里，人是实际存在的...</p>
+												<div class="artical-info">
+													<span class="read" title="浏览数">35</span>
+													<span class="collect" title="收藏">12</span>
+													<span class="favor" title="点赞">12</span>
+												</div>
+											</div>
+											<div class="col-md-4 col-sm-4 artical">
+												<div style="position: relative;">
+													<a class="db" href="" target="_blank">
+														<img src="img/front/person/43.jpg" alt="" title="" />
+													</a>
+													<span class="mgzTitleBg" style="width: ;">&nbsp;</span>
+													<span class="mgzTitleText" style="width: ;"><b>努比亚 Z11 Max 发布</b></span>
+												</div>
+												<h1>
+													<a href="" title="" target="_blank">努比亚 Z11 Max 发布：这是一台 C 罗代言的”Max“</a>
+												</h1>
+												<p>苹果在三月份发布了 iPhone SE 后，曾经刮起了一股小屏手机的风潮...</p>
+												<div class="artical-info">
+													<span class="read" title="浏览数">35</span>
+													<span class="collect" title="收藏">12</span>
+													<span class="favor" title="点赞">12</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!--two-->
+							<div class="section-h">
+								<div class="row">
+									<div class="col-md-12 col-sm-12">
+										<div class="_icon"><img src="img/front/person/j.png" /></div>
+										<div class="_icontxt">
+											<span><b>花瓣</b></span><br />
+											<span>发掘产品和趋势的价值</span>
+										</div>
+										<div class="icnList">
+											<span class="subnum">24136万人订阅</span>
+											<span class="subscribe" title="添加订阅">订阅</span>
+
+										</div>
+									</div>
+								</div>
+								<div class="sections">
+									<div class="row artical-box">
+										<div class="col-md-4 col-sm-4 artical">
+												<div style="position: relative;">
+													<a class="db" href="" target="_blank">
+														<img src="img/front/person/45.jpg" alt="" title="" />
+													</a>
+													<span class="mgzTitleBg" style="width: ;">&nbsp;</span>
+													<span class="mgzTitleText" style="width: ;"><b>Motion Stills</b></span>
+												</div>	
+											<h1>
+															<a href="" title="Google为 iOS平台推出了一款专属应用!" target="_blank">Google为 iOS平台推出了...</a>
+											</h1>
+											<p>应用图标Motion Stills，其主要功能是：通过与 iPhone上的Live Photos功能相结合...</p>
+											<div class="artical-info">
+												<span class="read" title="浏览数">35</span>
+												<span class="collect" title="收藏">12</span>
+												<span class="favor" title="点赞">12</span>
+											</div>
+										</div>
+										<div class="col-md-4 col-sm-4 artical">
+											<div style="position: relative;">
+													<a class="db" href="" target="_blank">
+														<img src="img/front/person/46.jpg" alt="" title="" />
+													</a>
+													<span class="mgzTitleBg" style="width: ;">&nbsp;</span>
+													<span class="mgzTitleText" style="width: ;"><b>Motion Stills</b></span>
+												</div>	
+											<h1>
+														<a href="" title="" target="_blank">拥抱还是远离“VR”，这道高考题该怎么答</a>
+													</h1>
+											<p>虚拟现实是用计算机技术模拟的真实或想象的世界，在这个世界里，人是实际存在的...</p>
+											<div class="artical-info">
+												<span class="read" title="浏览数">35</span>
+												<span class="collect" title="收藏">12</span>
+												<span class="favor" title="点赞">12</span>
+											</div>
+										</div>
+										<div class="col-md-4 col-sm-4 artical">
+										<div style="position: relative;">
+													<a class="db" href="" target="_blank">
+														<img src="img/front/person/44.jpg" alt="" title="" />
+													</a>
+													<span class="mgzTitleBg" style="width: ;">&nbsp;</span>
+													<span class="mgzTitleText" style="width: ;"><b>Motion Stills</b></span>
+										</div>	
+											<h1>
+														<a href="" title="" target="_blank">努比亚 Z11 Max 发布：这是一台 C 罗代言的”Max“</a>
+													</h1>
+											<p>苹果在三月份发布了 iPhone SE 后，曾经刮起了一股小屏手机的风潮...</p>
+											<div class="artical-info">
+												<span class="read" title="浏览数">35</span>
+												<span class="collect" title="收藏">12</span>
+												<span class="favor" title="点赞">12</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!--three-->
+							<div class="section-h">
+								<div class="row">
+									<div class="col-md-12 col-sm-12">
+										<div class="_icon"><img src="img/front/person/f.png" /></div>
+										<div class="_icontxt">
+											<span><b>优设</b></span><br />
+											<span>优秀的设计师聚集地</span>
+										</div>
+										<div class="icnList">
+											<span class="subnum">24136万人订阅</span>
+											<span class="subscribe" title="添加订阅">订阅</span>
+
+										</div>
+									</div>
+								</div>
+								<div class="sections">
+									<div class="row artical-box">
+										<div class="col-md-4 col-sm-4 artical">
+												<div style="position: relative;">
+													<a class="db" href="" target="_blank">
+														<img src="img/front/person/41.jpg" alt="" title="" />
+													</a>
+													<span class="mgzTitleBg" style="width: ;">&nbsp;</span>
+													<span class="mgzTitleText" style="width: ;"><b>Motion Stills</b></span>
+												</div>	
+											<h1>
+															<a href="" title="Google为 iOS平台推出了一款专属应用!" target="_blank">Google为 iOS平台推出了...</a>
+											</h1>
+											<p>应用图标Motion Stills，其主要功能是：通过与 iPhone上的Live Photos功能相结合...</p>
+											<div class="artical-info">
+												<span class="read" title="浏览数">35</span>
+												<span class="collect" title="收藏">12</span>
+												<span class="favor" title="点赞">12</span>
+											</div>
+										</div>
+										<div class="col-md-4 col-sm-4 artical">
+												<div style="position: relative;">
+													<a class="db" href="" target="_blank">
+														<img src="img/front/person/43.jpg" alt="" title="" />
+													</a>
+													<span class="mgzTitleBg" style="width: ;">&nbsp;</span>
+													<span class="mgzTitleText" style="width: ;"><b>Motion Stills</b></span>
+												</div>	
+											<h1>
+															<a href="" title="Google为 iOS平台推出了一款专属应用!" target="_blank">Google为 iOS平台推出了...</a>
+											</h1>
+											<p>应用图标Motion Stills，其主要功能是：通过与 iPhone上的Live Photos功能相结合...</p>
+											<div class="artical-info">
+												<span class="read" title="浏览数">35</span>
+												<span class="collect" title="收藏">12</span>
+												<span class="favor" title="点赞">12</span>
+											</div>
+										</div>
+										<div class="col-md-4 col-sm-4 artical">
+												<div style="position: relative;">
+													<a class="db" href="" target="_blank">
+														<img src="img/front/person/44.jpg" alt="" title="" />
+													</a>
+													<span class="mgzTitleBg" style="width: ;">&nbsp;</span>
+													<span class="mgzTitleText" style="width: ;"><b>Motion Stills</b></span>
+												</div>	
+											<h1>
+															<a href="" title="Google为 iOS平台推出了一款专属应用!" target="_blank">Google为 iOS平台推出了...</a>
+											</h1>
+											<p>应用图标Motion Stills，其主要功能是：通过与 iPhone上的Live Photos功能相结合...</p>
+											<div class="artical-info">
+												<span class="read" title="浏览数">35</span>
+												<span class="collect" title="收藏">12</span>
+												<span class="favor" title="点赞">12</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--运营-->
+						<div class="main-section" id="yunying" style="display: none;">
+							<!--one-->
+							<div class="section-h">
+								<div class="row subscribetype">
+									<div class="col-md-12 col-sm-12">
+										<div class="_icon"><img src="img/front/person/h.jpg" /></div>
+										<div class="_icontxt">
+											<span><b>科学松鼠会</b></span><br />
+											<span>先进科学技术的推荐地</span>
+										</div>
+										<div class="icnList">
+											<span class="subnum">24136万人订阅</span>
+											<span class="subscribe" title="添加订阅">订阅</span>
+
+										</div>
+									</div>
+								</div>
+								<div class="sections">
+									<div class="row artical-box">
+										<div class="col-md-4 col-sm-4 artical">
+											<div style="position: relative;">
+													<a class="db" href="" target="_blank">
+														<img src="img/front/person/46.jpg" alt="" title="" />
+													</a>
+													<span class="mgzTitleBg" style="width: ;">&nbsp;</span>
+													<span class="mgzTitleText" style="width: ;"><b>Motion Stills</b></span>
+												</div>	
+											<h1>
+													<a href="" title="Google为 iOS平台推出了一款专属应用!" target="_blank">Google为 iOS平台推出了...</a>
+												</h1>
+											<p>应用图标Motion Stills，其主要功能是：通过与 iPhone上的Live Photos功能相结合...</p>
+											<div class="artical-info">
+												<span class="read" title="浏览数">35</span>
+												<span class="collect" title="收藏">12</span>
+												<span class="favor" title="点赞">12</span>
+											</div>
+										</div>
+										<div class="col-md-4 col-sm-4 artical">
+											<div style="position: relative;">
+													<a class="db" href="" target="_blank">
+														<img src="img/front/person/47.jpg" alt="" title="" />
+													</a>
+													<span class="mgzTitleBg" style="width: ;">&nbsp;</span>
+													<span class="mgzTitleText" style="width: ;"><b>Motion Stills</b></span>
+												</div>	
+											<h1>
+											    	<a href="" title="" target="_blank">拥抱还是远离“VR”，这道高考题该怎么答</a>
+												</h1>
+											<p>虚拟现实是用计算机技术模拟的真实或想象的世界，在这个世界里，人是实际存在的...</p>
+											<div class="artical-info">
+												<span class="read" title="浏览数">35</span>
+												<span class="collect" title="收藏">12</span>
+												<span class="favor" title="点赞">12</span>
+											</div>
+										</div>
+										<div class="col-md-4 col-sm-4 artical">
+											<div style="position: relative;">
+													<a class="db" href="" target="_blank">
+														<img src="img/front/person/48.jpg" alt="" title="" />
+													</a>
+													<span class="mgzTitleBg" style="width: ;">&nbsp;</span>
+													<span class="mgzTitleText" style="width: ;"><b>Motion Stills</b></span>
+												</div>	
+											<h1>
+													<a href="" title="" target="_blank">努比亚 Z11 Max 发布：这是一台 C 罗代言的”Max“</a>
+												</h1>
+											<p>苹果在三月份发布了 iPhone SE 后，曾经刮起了一股小屏手机的风潮...</p>
+											<div class="artical-info">
+												<span class="read" title="浏览数">35</span>
+												<span class="collect" title="收藏">12</span>
+												<span class="favor" title="点赞">12</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!--two-->
+							<div class="section-h">
+								<div class="row">
+									<div class="col-md-12 col-sm-12">
+										<div class="_icon"><img src="img/front/person/z.png" /></div>
+										<div class="_icontxt">
+											<span><b>站酷画板</b></span><br />
+											<span>是中国领先的科技新媒体</span>
+										</div>
+										<div class="icnList">
+											<span class="subnum">24136万人订阅</span>
+											<span class="subscribe" title="添加订阅">订阅</span>
+
+										</div>
+									</div>
+								</div>
+								<div class="sections">
+									<div class="row artical-box">
+										<div class="col-md-4 col-sm-4 artical">
+											<div style="position: relative;">
+													<a class="db" href="" target="_blank">
+														<img src="img/front/person/46.jpg" alt="" title="" />
+													</a>
+													<span class="mgzTitleBg" style="width: ;">&nbsp;</span>
+													<span class="mgzTitleText" style="width: ;"><b>Motion Stills</b></span>
+												</div>	
+											<h1>
+															<a href="" title="Google为 iOS平台推出了一款专属应用!" target="_blank">Google为 iOS平台推出了...</a>
+														</h1>
+											<p>应用图标Motion Stills，其主要功能是：通过与 iPhone上的Live Photos功能相结合...</p>
+											<div class="artical-info">
+												<span class="read" title="浏览数">35</span>
+												<span class="collect" title="收藏">12</span>
+												<span class="favor" title="点赞">12</span>
+											</div>
+										</div>
+										<div class="col-md-4 col-sm-4 artical">
+											<div style="position: relative;">
+													<a class="db" href="" target="_blank">
+														<img src="img/front/person/42.jpg" alt="" title="" />
+													</a>
+													<span class="mgzTitleBg" style="width: ;">&nbsp;</span>
+													<span class="mgzTitleText" style="width: ;"><b>Motion Stills</b></span>
+												</div>	
+											<h1>
+														<a href="" title="" target="_blank">拥抱还是远离“VR”，这道高考题该怎么答</a>
+													</h1>
+											<p>虚拟现实是用计算机技术模拟的真实或想象的世界，在这个世界里，人是实际存在的...</p>
+											<div class="artical-info">
+												<span class="read" title="浏览数">35</span>
+												<span class="collect" title="收藏">12</span>
+												<span class="favor" title="点赞">12</span>
+											</div>
+										</div>
+										<div class="col-md-4 col-sm-4 artical">
+											<div style="position: relative;">
+													<a class="db" href="" target="_blank">
+														<img src="img/front/person/45.jpg" alt="" title="" />
+													</a>
+													<span class="mgzTitleBg" style="width: ;">&nbsp;</span>
+													<span class="mgzTitleText" style="width: ;"><b>Motion Stills</b></span>
+												</div>	
+											<h1>
+														<a href="" title="" target="_blank">努比亚 Z11 Max 发布：这是一台 C 罗代言的”Max“</a>
+													</h1>
+											<p>苹果在三月份发布了 iPhone SE 后，曾经刮起了一股小屏手机的风潮...</p>
+											<div class="artical-info">
+												<span class="read" title="浏览数">35</span>
+												<span class="collect" title="收藏">12</span>
+												<span class="favor" title="点赞">12</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!--three-->
+							<div class="section-h">
+								<div class="row">
+									<div class="col-md-12 col-sm-12">
+										<div class="_icon"><img src="img/front/person/g.jpg" /></div>
+										<div class="_icontxt">
+											<span><b>耳语</b></span><br />
+											<span>业界资讯和职业相关的优秀工具和资源</span>
+										</div>
+										<div class="icnList">
+											<span class="subnum">24136万人订阅</span>
+											<span class="subscribe" title="添加订阅">订阅</span>
+
+										</div>
+									</div>
+								</div>
+								<div class="sections">
+									<div class="row artical-box">
+										<div class="col-md-4 col-sm-4 artical">
+											<div style="position: relative;">
+													<a class="db" href="" target="_blank">
+														<img src="img/front/person/44.jpg" alt="" title="" />
+													</a>
+													<span class="mgzTitleBg" style="width: ;">&nbsp;</span>
+													<span class="mgzTitleText" style="width: ;"><b>Motion Stills</b></span>
+											</div>	
+											<h1>
+													<a href="" title="Google为 iOS平台推出了一款专属应用!" target="_blank">Google为 iOS平台推出了...</a>
+												</h1>
+											<p>应用图标Motion Stills，其主要功能是：通过与 iPhone上的Live Photos功能相结合...</p>
+											<div class="artical-info">
+												<span class="read" title="浏览数">35</span>
+												<span class="collect" title="收藏">12</span>
+												<span class="favor" title="点赞">12</span>
+											</div>
+										</div>
+										<div class="col-md-4 col-sm-4 artical">
+											<div style="position: relative;">
+													<a class="db" href="" target="_blank">
+														<img src="img/front/person/47.jpg" alt="" title="" />
+													</a>
+													<span class="mgzTitleBg" style="width: ;">&nbsp;</span>
+													<span class="mgzTitleText" style="width: ;"><b>Motion Stills</b></span>
+											</div>
+											<h1>
+													<a href="" title="" target="_blank">拥抱还是远离“VR”，这道高考题该怎么答</a>
+												</h1>
+											<p>虚拟现实是用计算机技术模拟的真实或想象的世界，在这个世界里，人是实际存在的...</p>
+											<div class="artical-info">
+												<span class="read" title="浏览数">35</span>
+												<span class="collect" title="收藏">12</span>
+												<span class="favor" title="点赞">12</span>
+											</div>
+										</div>
+										<div class="col-md-4 col-sm-4 artical">
+											<div style="position: relative;">
+													<a class="db" href="" target="_blank">
+														<img src="img/front/person/48.jpg" alt="" title="" />
+													</a>
+													<span class="mgzTitleBg" style="width: ;">&nbsp;</span>
+													<span class="mgzTitleText" style="width: ;"><b>Motion Stills</b></span>
+											</div>
+											<h1>
+													<a href="" title="" target="_blank">努比亚 Z11 Max 发布：这是一台 C 罗代言的”Max“</a>
+												</h1>
+											<p>苹果在三月份发布了 iPhone SE 后，曾经刮起了一股小屏手机的风潮...</p>
+											<div class="artical-info">
+												<span class="read" title="浏览数">35</span>
+												<span class="collect" title="收藏">12</span>
+												<span class="favor" title="点赞">12</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--我的订阅-->
+						<div class="main-section backg" id="mysubscribe" style="display: none;">
+							<p class="dingyue-num">您目前的订阅量为<span id="dingyue-num">1</span></p>
+							<div id="addarti">
+								<div class="section-h">
+									<div class="row">
+										<div class="col-md-12 col-sm-12">
+											<div class="_icon"><img src="img/front/person/i.jpg" /></div>
+											<div class="_icontxt">
+												<span><b>伯乐在线</b></span><br />
+												<span>职业相关的博客文章、业界资讯</span>
+											</div>
+											<div class="icnList">
+												<span class="subnum">24136万人订阅</span>
+												<span class="subscribe" title="添加订阅">订阅</span>
+											</div>
+										</div>
+									</div>
+									<script>
+										$(function() {
+											var i = 0;
+											$('.subscribe').click(function() {
+												i++;
+												if(i % 2) {
+													$(this).css('background', '#777 url(img/front/person/cancel.png) no-repeat 10px 5px').attr('title', '取消订阅');
+
+												}
+												if(i % 2 == 0) {
+													$(this).css({
+														"background": "#39f url(img/front/person/tianjia.png) no-repeat 10px 5px",
+														'color': '#fff'
+													});
+												}
+											});
+										});
+									</script>
+								</div>
+							</div>
+							<div id="addarti">
+								<div class="section-h">
+									<div class="row">
+										<div class="col-md-12 col-sm-12">
+											<div class="_icon"><img src="img/front/person/d.png" /></div>
+											<div class="_icontxt">
+												<span><b>腾讯ISUX</b></span><br />
+												<span>tencent的先进科学技术分享</span>
+											</div>
+											<div class="icnList">
+												<span class="subnum">24136万人订阅</span>
+												<span class="subscribe" title="添加订阅">订阅</span>
+
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--我的收藏-->
+						<div class="main-section backg" id="mycollect" style="display: none;">
+							<!--<p class="collect-num">你的收藏量为<span id="collect-num">0</span></p>-->
+							<div class="row">
+								<div class="new">
+									<div class="col-md-4 col-sm-5 ">
+										<img class="img-responsive" src="img/front/person/45.jpg" alt="">
+									</div>
+									<div id="close-attention">
+										<div class="col-md-7 col-sm-6 textbox">
+											<p><span class="time">2016-4-12</span></p>
+											<p><b>拓迪智能科技有限公司实习基地能科技有限公司实习基地挂牌仪式</b></p>
+											<p>4月12日下午，我院与广东拓迪智能科技有限公司的教学实习基地签字与揭牌仪式在广东拓迪智能科技有限公司举行。罗君辉书记、韩...</p>
+											<div class="arti-state">
+												<span class="favor" title="点赞">35</span>
+												<span class="collect" title="收藏">12</span>
+												<span class="comment" title="评论">30</span>
+											</div>
+										</div>
+										<div class="col-md-1 col-sm-1 ">
+											<div class="close-attention">取消关注</div>
+										</div>
+									</div>
+								</div>
+								<div class="new">
+									<div class="col-md-4 col-sm-5 ">
+										<img class="img-responsive" src="img/front/person/44.jpg" alt="">
+									</div>
+									<div id="close-attention">
+										<div class="col-md-7 col-sm-6 textbox">
+											<p><span class="time">2016-4-12</span></p>
+											<p><b>拓迪智能科技有限公司实习基地挂牌仪式</b></p>
+											<p>4月12日下午，我院与广东拓迪智能科技有限公司的教学实习基地签字与揭牌仪式在广东拓迪智能科技有限公司举行。罗君辉书记、韩...</p>
+											<div class="arti-state">
+												<span class="favor" title="点赞">35</span>
+												<span class="collect" title="收藏">12</span>
+												<span class="comment" title="评论">30</span>
+											</div>
+										</div>
+										<div class="col-md-1 col-sm-1 ">
+											<div class="close-attention">取消关注</div>
+										</div>
+									</div>
+								</div>
+								<div class="new">
+									<div class="col-md-4 col-sm-5 ">
+										<img class="img-responsive" src="img/front/person/44.jpg" alt="">
+									</div>
+									<div id="close-attention">
+										<div class="col-md-7 col-sm-6 textbox">
+											<p><span class="time">2016-4-12</span></p>
+											<p><b>拓迪智能科技有限公司实习基地挂牌仪式</b></p>
+											<p>4月12日下午，我院与广东拓迪智能科技有限公司的教学实习基地签字与揭牌仪式在广东拓迪智能科技有限公司举行。罗君辉书记、韩...</p>
+											<div class="arti-state">
+												<span class="favor" title="点赞">35</span>
+												<span class="collect" title="收藏">12</span>
+												<span class="comment" title="评论">30</span>
+											</div>
+										</div>
+										<div class="col-md-1 col-sm-1 ">
+											<div class="close-attention">取消关注</div>
+										</div>
+									</div>
+								</div>
+								<div class="new">
+									<div class="col-md-4 col-sm-5 ">
+										<img class="img-responsive" src="img/front/person/44.jpg" alt="">
+									</div>
+									<div id="close-attention">
+										<div class="col-md-7 col-sm-6 textbox">
+											<p><span class="time">2016-4-12</span></p>
+											<p><b>拓迪智能科技有限公司实习基地挂牌仪式</b></p>
+											<p>4月12日下午，我院与广东，我院与广东拓迪智能科技有限公司的教学实习基地签字与揭牌仪式在广东拓迪拓迪智能科技有限公司的教学实习基地签字与揭牌仪式在广东拓迪智能科技有限公司举行。罗君辉书记、韩...</p>
+											<div class="arti-state">
+												<span class="favor" title="点赞">35</span>
+												<span class="collect" title="收藏">12</span>
+												<span class="comment" title="评论">30</span>
+											</div>
+										</div>
+										<div class="col-md-1 col-sm-1 ">
+											<div class="close-attention">取消关注</div>
+										</div>
+									</div>
+								</div>
+								<div class="new">
+									<div class="col-md-4 col-sm-5 ">
+										<img class="img-responsive" src="img/front/person/44.jpg" alt="">
+									</div>
+									<div id="close-attention">
+										<div class="col-md-7 col-sm-6 textbox">
+											<p><span class="time">2016-4-12</span></p>
+											<p><b>拓迪智能科技有限公司实习基地挂牌仪式</b></p>
+											<p>4月12日下午，我院与广东拓迪智能科技有限公司的教学实习基地签字与揭牌仪式在广东拓迪智能科技有限公司举行。罗君辉书记、韩...</p>
+											<div class="arti-state">
+												<span class="favor" title="点赞">35</span>
+												<span class="collect" title="收藏">12</span>
+												<span class="comment" title="评论">30</span>
+											</div>
+										</div>
+										<div class="col-md-1 col-sm-1 ">
+											<div class="close-attention">取消关注</div>
+										</div>
+									</div>
+								</div>
+								<div class="new">
+									<div class="col-md-4 col-sm-5 ">
+										<img class="img-responsive" src="img/front/person/44.jpg" alt="">
+									</div>
+									<div id="close-attention">
+										<div class="col-md-7 col-sm-6 textbox">
+											<p><span class="time">2016-4-12</span></p>
+											<p><b>拓迪智能科技有限公司实习基地挂牌仪式</b></p>
+											<p>4月12日下午，我院与广东拓迪智能科技有限公司的教学实习基地签字与揭牌仪式在广东拓迪，我院与广东拓迪智能科技有限公司的教学实习基地签字与揭牌仪式在广东拓迪智能科技有限公司举行。罗君辉书记、韩...</p>
+											<div class="arti-state">
+												<span class="favor" title="点赞">35</span>
+												<span class="collect" title="收藏">12</span>
+												<span class="comment" title="评论">30</span>
+											</div>
+										</div>
+										<div class="col-md-1 col-sm-1 ">
+											<div class="close-attention">取消关注</div>
+										</div>
+									</div>
+								</div>
+								<button class="btn btn-block" onclick="window.open('mycollect.html')">查看更多</button>
+							</div>
+						</div>
+						<!--取消收藏的特效-->
+						<script>
+							$(function() {
+								$('div#close-attention').hover(function() {
+									var z = $(this).index();
+									$(this).find('.close-attention').css('display', 'block');
+								}, function() {
+									$('.close-attention').css('display', 'none');
+								});
+							});
+						</script>
+						<!--我的笔记-->
+						<div class="main-section backg" id="mynote" style="display: none;">
+							<h3>添加笔记</h3>
+							<div class="alert alert-info tipword">
+								<div class="tipword">欢迎进入我的tfin笔记！随时随地，记录点滴</div>
+							</div>
+							<div class="addnotes">
+								<h6 class="titlebar">最新笔记</h6>
+								<ul class="article_num">
+									<li class="toprank_blue">
+										<a><i>1</i>一套绝对实用的jQuery插件库</a>
+									</li>
+									<li class="toprank_blue">
+										<a><i>2</i>vonic，基于vue和ionic的移动端框架</a>
+									</li>
+									<li class="toprank_blue">
+										<a><i>3</i>canvas 愤怒的小鸟 好费劲 = =</a>
+									</li>
+									<li>
+										<a><i>4</i>css3学习制作胶囊开关</a>
+									</li>
+									<li>
+										<a><i>5</i>找项目，希望大神们推荐项目</a>
+									</li>
+									<li>
+										<a><i>6</i>DOM事件绑定与行为阻止</a>
+									</li>
+									<li>
+										<a><i>7</i>移动端布局终极解决方案</a>
+									</li>
+									<li>
+										<a><i>8</i>极验验证之我的懒惰</a>
+									</li><li>
+										<a><i>4</i>css3学习制作胶囊开关</a>
+									</li>
+									<li>
+										<a><i>5</i>找项目，希望大神们推荐项目</a>
+									</li>
+									<li>
+										<a><i>6</i>DOM事件绑定与行为阻止</a>
+									</li>
+									<li>
+										<a><i>7</i>移动端布局终极解决方案</a>
+									</li>
+									<li>
+										<a><i>8</i>极验验证之我的懒惰</a>
+									</li><li>
+										<a><i>4</i>css3学习制作胶囊开关</a>
+									</li>
+									<li>
+										<a><i>5</i>找项目，希望大神们推荐项目</a>
+									</li>
+									<li>
+										<a><i>6</i>DOM事件绑定与行为阻止</a>
+									</li>
+									<li>
+										<a><i>7</i>移动端布局终极解决方案</a>
+									</li>
+								</ul>
+							</div>
+							<div id="main-pager"> <!--翻页 -->
+									<div class="m-page">
+										<div class="inner">
+											<div class="total">共 3 页</div>
+											<ul class="items">
+												<li class="item prev">
+													<span>上一页</span>
+												</li>
+												<li class="item active">
+													<span class="num">1</span>
+												</li>
+												<li class="item">
+													<a class="num" href="#" >2</a>
+												</li>
+												<li class="item">
+													<a class="J_Ajax num">3</a>
+												</li>
+												<li class="item">
+													<a class="J_Ajax num" >4</a>
+												</li>
+												<li class="item">
+													<a class="J_Ajax num" >5</a>
+												</li>
+												<li class="item dot">...</li>
+												<li class="item next">
+													<a class="J_Ajax num icon-tag" href="#" >
+														<span>下一页</span>
+													</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+							</div>
+						</div>
+					</div>
+					<!--右栏	-->
+					<div class="col-md-4 col-sm-3 side-right">
+						<div class="conatiner">
+							<!--热搜排行  -->
+							<div class="section-title">
+								<h2>热搜排行</h2>
+							</div>
+							<div class="hotsrank">
+								<ul class="rank-list">
+									<li>
+										<span class="blue_q">1</span>
+										<a href="" target="_blank" title="美媒：发动机难仿制 俄罗斯乐见中国继续进口">美媒：发动机难仿制 俄罗斯乐见中国继续进口</a>
+									</li>
+									<li>
+										<span class="blue_q">2</span>
+										<a href="" target="_blank" title="美媒：发动机难仿制 俄罗斯乐见中国继续进口">美媒：发动机难仿制 俄罗斯乐见中国继续进口</a>
+									</li>
+									<li>
+										<span class="blue_q">3</span>
+										<a href="" target="_blank" title="美媒：发动机难仿制 俄罗斯乐见中国继续进口">美媒：发动机难仿制 俄罗斯乐见中国继续进口</a>
+									</li>
+									<li>
+										<span class="">4</span>
+										<a href="" target="_blank" title="美媒：发动机难仿制 俄罗斯乐见中国继续进口">美媒：发动机难仿制 俄罗斯乐见中国继续进口</a>
+									</li>
+									<li>
+										<span class="">5</span>
+										<a href="" target="_blank" title="美媒：发动机难仿制 俄罗斯乐见中国继续进口">美媒：发动机难仿制 俄罗斯乐见中国继续进口</a>
+									</li>
+									<li>
+										<span class="">6</span>
+										<a href="" target="_blank" title="美媒：发动机难仿制 俄罗斯乐见中国继续进口">美媒：发动机难仿制 俄罗斯乐见中国继续进口</a>
+									</li>
+									<li>
+										<span class="">7</span>
+										<a href="" target="_blank" title="美媒：发动机难仿制 俄罗斯乐见中国继续进口">美媒：发动机难仿制 俄罗斯乐见中国继续进口</a>
+									</li>
+									<li>
+										<span class="">8</span>
+										<a href="" target="_blank" title="美媒：发动机难仿制 俄罗斯乐见中国继续进口">美媒：发动机难仿制 俄罗斯乐见中国继续进口</a>
+									</li>
+									<li>
+										<span class="">9</span>
+										<a href="" target="_blank" title="美媒：发动机难仿制 俄罗斯乐见中国继续进口">美媒：发动机难仿制 俄罗斯乐见中国继续进口</a>
+									</li>
+									<li>
+										<span class="">10</span>
+										<a href="" target="_blank" title="美媒：发动机难仿制 俄罗斯乐见中国继续进口">美媒：发动机难仿制 俄罗斯乐见中国继续进口</a>
+									</li>
+								</ul>
+							</div>
+							<!--相关订阅  -->
+							<div class="right-side" id="right-side">
+								<div class="title">
+									<a href="" class="btn btn-primary btn-sm navbar-btn navbar-left hidden-xs">相关订阅</a>
+								</div>
+								<div class="dingyue">
+									<div class="list-group">
+										<div class="row" id="list">
+											<div class="col-md-3 col-sm-4 col-xs-4 ">
+												<a class="_icon"><img src="img/front/person/a.png" alt="UI中国"></a>
+											</div>
+											<div class="col-md-9 col-sm-8 col-xs-8">
+												<div href="" class="list-group-item">
+													<b>UI中国</b><br />
+													<p>科技咨询、创新产品和新兴技术</p>
+													<span class="badge on" title="添加订阅"></span>
+												</div>
+											</div>
+										</div>
+										<div class="row" id="list">
+											<div class="col-md-3 col-sm-4 col-xs-4 ">
+												<a class="_icon"><img src="img/front/person/l.jpg" alt="极客学院"></a>
+											</div>
+											<div class="col-md-9 col-sm-8 col-xs-8">
+												<div href="" class="list-group-item">
+													<b>IT瘾资讯推荐</b><br />
+													<p>互联网科技、手持设备和编程</p>
+													<span class="badge on" title="添加订阅"></span>
+												</div>
+											</div>
+										</div>
+										<div class="row" id="list">
+											<div class="col-md-3 col-sm-4 col-xs-4 ">
+												<a class="_icon"><img src="img/front/person/j.png" alt="极客学院"></a>
+											</div>
+											<div class="col-md-9 col-sm-8 col-xs-8">
+												<div href="" class="list-group-item">
+													<b>花瓣</b><br />
+													<p>发掘产品和趋势的价值</p>
+													<span class="badge on" title="添加订阅"></span>
+												</div>
+											</div>
+										</div>
+										<div class="row" id="list">
+											<div class="col-md-3 col-sm-4 col-xs-4 ">
+												<a class="_icon"><img src="img/front/person/d.png" alt="极客学院"></a>
+											</div>
+											<div class="col-md-9 col-sm-8 col-xs-8">
+												<div href="" class="list-group-item">
+													<b>腾讯ISUX</b><br />
+													<p>tencent的先进科学技术分享</p>
+													<span class="badge on" title="添加订阅"></span>
+												</div>
+											</div>
+										</div>
+										<div class="row" id="list">
+											<div class="col-md-3 col-sm-4 col-xs-4 ">
+												<a class="_icon"><img src="img/front/person/f.png" alt="极客学院"></a>
+											</div>
+											<div class="col-md-9 col-sm-8 col-xs-8">
+												<div href="" class="list-group-item">
+													<b>优设</b><br />
+													<p>优秀的设计师聚集地</p>
+													<span class="badge on" title="添加订阅"></span>
+												</div>
+											</div>
+										</div>
+										<div class="row" id="list">
+											<div class="col-md-3 col-sm-4 col-xs-4 ">
+												<a class="_icon"><img src="img/front/person/k.png" alt="极客学院"></a>
+											</div>
+											<div class="col-md-9 col-sm-8 col-xs-8">
+												<div href="" class="list-group-item">
+													<b>爱范儿</b><br />
+													<p>发现创新价值的科技媒体</p>
+													<span class="badge on" title="添加订阅"></span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<script>
+								$(function() {
+									$('.on').click(function() {
+										i++;
+										if(i % 2) {
+											$(this).css('background', '#777 url(img/front/person/jianhao.png) no-repeat 50%').attr('title', '取消订阅');
+										}
+										if(i % 2 == 0) {
+											$(this).css('background', '#39f url(img/front/person/add.png) no-repeat 50%').attr('title', '添加订阅');
+										}
+									});
+								});
+							</script>
+							<div class="note right-side" id="note">
+								<img src="img/front/person/note.png" />
+								<b>意见反馈</b>
+								<div class="note-textbox">
+									<textarea id="txt1" placeholder="写下你的看法或建议" name="mytext"></textarea>
+									<button class="comment-btn" id="btn1" type="submit">提交</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--意见反馈特效-->
+					<script type="text/javascript">
+						$(function() {
+							var oBtn1 = $('#btn1');
+							var oTxt1 = $('#txt1');
+							$('#btn1').click( function(){
+								if($('#txt1').value == '') 
+								{
+									alert('内容不能为空！');
+									return false;
+								}
+								alert('提交成功');
+								$('#txt1').value = " ";
+							});
+							$('#txt1').bind({
+								'focus':function() {$(this).css('height','100px');$('#note').css('height','210px')},
+								'blur':function() {$(this).css('height','60px');$('#note').css('height','165px')}
+							});
+						});
+					</script>
+				</div>
+			</div>
+		</div>
+
+		<!--frinendlink start-->
+		<div id="gundong">
+			<div class="container">
+				<div class="row">
+					<div class="gundong-wrap" id="IDwrap">
+						<img src="img/front/friendlink.png" />
+						<div class="v_list">
+							<ul class="v_scroll">
+								<li>
+									<a><img src="img/front/friend01.png" class="img-responsive" /></a>
+								</li>
+								<li>
+									<a><img src="img/front/friend02.png" class="img-responsive" /></a>
+								</li>
+								<li>
+									<a><img src="img/front/friend03.png" class="img-responsive" /></a>
+								</li>
+								<li>
+									<a><img src="img/front/friend04.png" class="img-responsive" /></a>
+								</li>
+								<li>
+									<a><img src="img/front/friend05.png" class="img-responsive" /></a>
+								</li>
+								<li>
+									<a><img src="img/front/friend01.png" class="img-responsive" /></a>
+								</li>
+								<li>
+									<a><img src="img/front/friend02.png" class="img-responsive" /></a>
+								</li>
+								<li>
+									<a><img src="img/front/friend03.png" class="img-responsive" /></a>
+								</li>
+								<li>
+									<a><img src="img/front/friend04.png" class="img-responsive" /></a>
+								</li>
+								<li>
+									<a><img src="img/front/friend05.png" class="img-responsive" /></a>
+								</li>
+								<li>
+									<a><img src="img/front/friend01.png" class="img-responsive" /></a>
+								</li>
+								<li>
+									<a><img src="img/front/friend02.png" class="img-responsive" /></a>
+								</li>
+							</ul>
+						</div>
+						<a class="prev"><i class="i_prev"></i></a>
+						<a class="next"> <i class="i_next"></i></a>
+					</div>
+					<!--roll-->
+				</div>
+				<!--row-->
+			</div>
+			<!--container-->
+		</div>
+		<script type="text/javascript">
+			var i = 0;
+			$(".prev").click(function() {
+				i++;
+				if(i > 1) {
+					i = 0;
+				}
+				$(".v_scroll").animate({
+					"left": -1014 * i + "px"
+				}, 1500);
+			})
+			$(".next").click(function() {
+				i++;
+				if(i > 1) {
+					i = 0;
+				}
+				$(".v_scroll").animate({
+					"left": -1014 * i + "px"
+				}, 1500);
+			})
+		</script>
+		<!--frinendlink end-->
+
+		<!--footer start-->
+		<footer>
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-sm-12 col-md-12" id="left">
+						<div class="footer_nav">
+							<ul>
+								<li>首页</li>
+								<li>个人中心</li>
+								<li>关于我们</li>
+								<li>用户须知</li>
+							</ul><br />
+							<p>Copy All Right @ 广东技术师范学院 All rights reserved.</p>
+							<p>地址：广州市天河区中山大道西293号</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<!-- 菜单特效-->
+		<script type="text/javascript">
+			$(function() {
+				var aLi = $('#menu li');
+				var aDiv = $('.main-section');
+				aLi.click(function() {
+					z = $(this).index();
+					$(this).addClass('subnav-active').siblings().removeClass('subnav-active');
+					aDiv.eq(z).css('display', 'block').siblings('div').css('display', 'none');
+				});
+
+			});
+		</script>
+	</div>
+	</body>
+
+</html>

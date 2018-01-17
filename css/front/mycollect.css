@@ -1,0 +1,82 @@
+body,html {
+			/*background:rgb(222, 240, 215);*/
+			margin: 0;
+			padding: 0;
+			height: 100%;
+		}
+.collect-main>div.conatiner{
+	height: auto;
+}
+h3{
+	font-size: 24px;
+	text-align: center;
+	margin: 40px auto;
+	width: 130px;
+	background: honeydew;
+}
+p.space{
+	width: 1170px;
+	border: 1px dotted #ccc;
+	margin: 0px auto 10px ;
+}
+
+
+.mycollect{
+	margin: 20px auto;
+}
+.new {
+    margin-bottom: 15px;
+    height: 170px;
+}
+.new img {
+    width: 164px;
+    height: 160px;
+} 
+.newsbox {
+    width: 493px;
+    height: 160px;
+    margin-right: 15px;
+    overflow: hidden;
+}
+.textbox {
+    height: 160px;
+    overflow: hidden;
+}
+.textbox p {
+    width: 330px;
+}
+.textbox p:nth-child(2) {
+	overflow: hidden;
+	text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.textbox p:nth-child(3) {
+    width: 100%;
+    height: 60px;
+    line-height: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.time{
+	background-color: #57a7fd;
+	padding:2px;
+	border-radius: 4px;
+}
+.close-attention{
+	background: rgb(247, 247, 247);
+    box-shadow: 2px 2px 5px rgb(202, 228, 226);
+	margin-top: 30px;
+	padding: 10px 5px 10px;
+	text-align: center;
+	cursor: pointer;
+	width: 28px;
+	display: none;
+}
+.collect-main{
+	padding-bottom: 180px;
+}
+footer{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}

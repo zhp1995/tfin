@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>首页</title>
+		<link rel="stylesheet" type="text/css" href="bootstrap3.2.0/front/css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/front/index.css" />
+		<link rel="stylesheet" type="text/css" href="css/front/common.css" />
+		<script src="bootstrap3.2.0/front/js/jquery-1.11.0.min.js"></script>
+		<script src="bootstrap3.2.0/front/js/bootstrap.js"></script>
+		<script src="js/front/script.js"></script>
+	</head>
+
+	<body>
+	<div style="margin: auto;">
+	<!--header start-->
+		<header>
+			<nav class="navbar navbar-inverse navbar-fixed-top" id="_nav">
+				<div class="container">
+					<div class="navbar-header">
+						<button class="navbar-toggle" data-toggle="collapse" data-target="#responsive-navbar">				
+						<span class="icon-bar"></span>  
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>	
+					</button>
+						<a href="#" class="navbar-brand" id="_logo"><img src="img/front/_logo.png" /></a>
+						<a href="#" class="navbar-brand" id="_tfin">tfin阅读</a>
+					</div>
+
+					<div class="collapse navbar-collapse " id="responsive-navbar">
+						<ul class="nav navbar-nav" id="menubox">
+							<li class="active">
+								<a href="index.html">首页</a>
+							</li>
+							<li>
+								<a href="person.html" target="_blank">个人中心</a>
+							</li>
+							<li>
+								<a href="">关于我们</a>
+							</li>
+						</ul>
+						<select class="navbar-form navbar-left" id="nav-select">
+							<option value="xinwen">新闻</option>
+						</select>
+						<form action="" class="navbar-form navbar-left" id="search-form">
+							<input type="text" placeholder="搜索" class="form-control" />
+							<button type="submit" onclick="window.open('search.html')">
+						<span class="glyphicon glyphicon-search"></span>
+					</button>
+						</form>
+
+						<div class="profile navbar-right">
+							<ul class="nav navbar-nav" id="right-menu">
+								<li>
+									<a href="login.html">登录</a>
+								</li>
+								<li>
+									<a href="regist.html">注册</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</nav>
+		</header>
+		<!--header end-->
+
+		<!--banner start-->
+		<div id="myCarousel" class="carousel slide">
+			<!-- 轮播（Carousel）小圆圈指标 -->
+			<ol class="carousel-indicators">
+				<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+				<li data-target="#myCarousel" data-slide-to="1"></li>
+				<li data-target="#myCarousel" data-slide-to="2"></li>
+			</ol>
+			<!-- 轮播（Carousel）项目 -->
+			<div class="carousel-inner">
+				<div class="item active">
+					<img class="carousel-inner img-responsive" src="img/front/banner01.jpg">
+					<div class="carousel-caption carousel-title">tfin悦读</div>
+					<div class="carousel-caption carousel-brief">tfin悦读网站主要是面向出去工作的从事计算机专业的人，提供各种有关计算机专业的文章给技术人员阅读。它是利用rss订阅源技术，提供一个后台可自动化的管理rss订阅源，自动的发布各类技术文章。</div>
+				</div>
+				<div class="item">
+					<img class="carousel-inner img-responsive" src="img/front/banner02.jpg" alt="Second slide">
+					<div class="carousel-caption carousel-title">tfin悦读</div>
+					<div class="carousel-caption carousel-brief">并提供前端界面，未登录的用户可以浏览各种文章，登陆的用户，本系统会根据用户类型自动推荐新闻，用户可以订阅本系统的新闻订阅源，可以收藏自己喜欢的文章，做笔记。</div>
+				</div>
+				<div class="item">
+					<img class="carousel-inner img-responsive" src="img/front/banner03.jpg" alt="Third slide">
+					<div class="carousel-caption carousel-title">tfin悦读</div>
+					<div class="carousel-caption carousel-brief">tfin悦读网站主要是面向出去工作的从事计算机专业的人，提供各种有关计算机专业的文章给技术人员阅读。它是利用rss订阅源技术，提供一个后台可自动化的管理rss订阅源，自动的发布各类技术文章。</div>
+				</div>
+			</div>
+			<!-- 轮播（Carousel）导航 -->
+			<a class="carousel-control left " href="#myCarousel" data-slide="prev"></a>
+			<a class="carousel-control right " href="#myCarousel" data-slide="next"></a>
+		</div>
+		<!--banner end-->
+
+		<!--tab start-->
+		<div id="Tab">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 col-sm-9">
+						<div class="left-side row">
+							<h2>推荐文章</h2>
+							<div id="myTabContent" class="tab-pane fade in active" >
+								<div class="row">
+									<div class="new">
+										<div class="col-md-4 col-sm-5 ">
+											<img class="img-responsive" src="img/front/person/43.png" alt="">
+										</div>
+										<div class="col-md-8 col-sm-7 newsbox" >
+											<p><span class="time">2016-4-12</span></p>
+											<p>
+												<a href="#"><b>拓迪智能科技有限公司实习基地挂牌仪式</b></a>
+											</p>
+											<p>4月12日下午，我院与广东拓迪智、韩...</p>
+											<div class="arti-state">
+												<span class="favor" title="点赞">35</span>
+												<span class="collect" title="收藏">12</span>
+												<span class="comment" title="评论">30</span>
+											</div>
+										</div>
+									</div>
+									<div class="new">
+										<div class="col-md-4 col-sm-5">
+											<img class="img-responsive" src="img/front/person/42.jpg" alt="">
+										</div>
+										<div class="col-md-8 col-sm-7 newsbox">
+											<p><span class="time">2016-4-12</span></p>
+											<p>
+												<a href="#"><b>拓迪智能科技有限公司实习基地挂牌仪式拓迪智能科技有限公司实习基地挂牌仪式</b></a>
+											</p>
+											<p> 2016年3月29日，电信学院光电工程专业业拓迪智能科技有限公司实习基地挂牌仪式拓迪智能科技有限公司实习基地挂牌仪式拓迪智能科技有限公司实习基地挂牌仪式拓迪智能科技有限公司实习基地挂牌仪式拓迪智能科技有限公司实习基地挂牌仪式拓迪智能科技有限公司实习基地挂牌仪式</p>
+											<div class="arti-state">
+												<span class="favor" title="点赞">35</span>
+												<span class="collect" title="收藏">12</span>
+												<span class="comment" title="评论">30</span>
+											</div>
+										</div>
+									</div>
+									<div class="new">
+										<div class="col-md-4 col-sm-5">
+											<img class="img-responsive" src="img/front/person/41.jpg" alt="">
+										</div>
+										<div class="col-md-8 col-sm-7 newsbox">
+											<p><span class="time">2016-4-12</span></p>
+											<p>
+												<a href="#"><b>拓迪智能科技有限公司实习基地挂牌仪式</b></a>
+											</p>
+											<p> 2016年3月29日，电信学院光电工程专业在韩克副院长带领下，前往佛山科技学专业在韩克副院长带领下，前往佛山科技学院物理与光领下，前往佛山科技学院物理与光电工程学院，就其光电信息科学与工程专业就其光电信息科学与工程专业</p>
+											<div class="arti-state">
+												<span class="favor" title="点赞">35</span>
+												<span class="collect" title="收藏">12</span>
+												<span class="comment" title="评论">30</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-3">
+						<div class=" right-side right-side-height">
+							<div class="title">
+								<a href="" class="btn btn-primary btn-sm navbar-btn navbar-left hidden-xs">相关订阅</a>
+							</div>
+							<div class="dingyue">
+								<div class="list-group" id="group-1" style="display: block;">
+									<div class="row" id="list">
+										<div class="col-md-3 col-sm-4 col-xs-4 ">
+											<a class="_icon"><img src="img/front/person/a.png" alt="UI中国"></a>
+										</div>
+										<div class="col-md-9 col-sm-8 col-xs-8">
+											<div href="" class="list-group-item">
+												<b>UI中国</b><br />
+												<p>科技咨询、创新产品和新兴技术</p>
+												<span class="badge on" title="添加订阅"></span>
+											</div>
+										</div>
+									</div>
+									<div class="row" id="list">
+										<div class="col-md-3 col-sm-4 col-xs-4 ">
+											<a class="_icon"><img src="img/front/person/l.jpg" alt="极客学院"></a>
+										</div>
+										<div class="col-md-9 col-sm-8 col-xs-8">
+											<div href="" class="list-group-item">
+												<b>IT瘾资讯推荐</b><br />
+												<p>互联网科技、手持设备和编程</p>
+												<span class="badge on" title="添加订阅"></span>
+											</div>
+										</div>
+									</div>
+									<div class="row" id="list">
+										<div class="col-md-3 col-sm-4 col-xs-4 ">
+											<a class="_icon"><img src="img/front/person/j.png" alt="极客学院"></a>
+										</div>
+										<div class="col-md-9 col-sm-8 col-xs-8">
+											<div href="" class="list-group-item">
+												<b>花瓣</b><br />
+												<p>发掘产品和趋势的价值</p>
+												<span class="badge on" title="添加订阅"></span>
+											</div>
+										</div>
+									</div>
+									<div class="row" id="list">
+										<div class="col-md-3 col-sm-4 col-xs-4 ">
+											<a class="_icon"><img src="img/front/person/d.png" alt="极客学院"></a>
+										</div>
+										<div class="col-md-9 col-sm-8 col-xs-8">
+											<div href="" class="list-group-item">
+												<b>腾讯ISUX</b><br />
+												<p>tencent的先进科学技术分享</p>
+												<span class="badge on" title="添加订阅"></span>
+											</div>
+										</div>
+									</div>
+									<div class="row" id="list">
+										<div class="col-md-3 col-sm-4 col-xs-4 ">
+											<a class="_icon"><img src="img/front/person/f.png" alt="极客学院"></a>
+										</div>
+										<div class="col-md-9 col-sm-8 col-xs-8">
+											<div href="" class="list-group-item">
+												<b>优设</b><br />
+												<p>优秀的设计师聚集地</p>
+												<span class="badge on" title="添加订阅"></span>
+											</div>
+										</div>
+									</div>
+									<div class="row" id="list">
+										<div class="col-md-3 col-sm-4 col-xs-4 ">
+											<a class="_icon"><img src="img/front/person/k.png" alt="极客学院"></a>
+										</div>
+										<div class="col-md-9 col-sm-8 col-xs-8">
+											<div href="" class="list-group-item">
+												<b>爱范儿</b><br />
+												<p>发现创新价值的科技媒体</p>
+												<span class="badge on" title="添加订阅"></span>											</div>
+										</div>
+									</div>
+									<span class="more" id="nextgroup"><b>下一页</b></span>
+								</div>
+								<div class="list-group" id="group-2" style="display: none;">
+									<div class="row" id="list">
+										<div class="col-md-3 col-sm-4 col-xs-4 ">
+											<a class="_icon"><img src="img/front/person/d.png" alt="极客学院"></a>
+										</div>
+										<div class="col-md-9 col-sm-8 col-xs-8">
+											<div href="" class="list-group-item">
+												<b>腾讯ISUX</b><br />
+												<p>tencent的先进科学技术分享</p>
+												<span class="badge on" title="添加订阅"></span>
+											</div>
+										</div>
+									</div>
+									<div class="row" id="list">
+										<div class="col-md-3 col-sm-4 col-xs-4 ">
+											<a class="_icon"><img src="img/front/person/f.png" alt="极客学院"></a>
+										</div>
+										<div class="col-md-9 col-sm-8 col-xs-8">
+											<div href="" class="list-group-item">
+												<b>优设</b><br />
+												<p>优秀的设计师聚集地</p>
+												<span class="badge on" title="添加订阅"></span>
+											</div>
+										</div>
+									</div>
+									<div class="row" id="list">
+										<div class="col-md-3 col-sm-4 col-xs-4 ">
+											<a class="_icon"><img src="img/front/person/k.png" alt="极客学院"></a>
+										</div>
+										<div class="col-md-9 col-sm-8 col-xs-8">
+											<div href="" class="list-group-item">
+												<b>爱范儿</b><br />
+												<p>发现创新价值的科技媒体</p>
+												<span class="badge on" title="添加订阅"></span>
+											</div>
+										</div>
+									</div>
+									<div class="row" id="list">
+										<div class="col-md-3 col-sm-4 col-xs-4 ">
+											<a class="_icon"><img src="img/front/person/a.png" alt="UI中国"></a>
+										</div>
+										<div class="col-md-9 col-sm-8 col-xs-8">
+											<div href="" class="list-group-item">
+												<b>UI中国</b><br />
+												<p>科技咨询、创新产品和新兴技术</p>
+												<span class="badge on" title="添加订阅"></span>
+											</div>
+										</div>
+									</div>
+									<div class="row" id="list">
+										<div class="col-md-3 col-sm-4 col-xs-4 ">
+											<a class="_icon"><img src="img/front/person/l.jpg" alt="极客学院"></a>
+										</div>
+										<div class="col-md-9 col-sm-8 col-xs-8">
+											<div href="" class="list-group-item">
+												<b>IT瘾资讯推荐</b><br />
+												<p>互联网科技、手持设备和编程</p>
+												<span class="badge on" title="添加订阅"></span>
+											</div>
+										</div>
+									</div>
+									<div class="row" id="list">
+										<div class="col-md-3 col-sm-4 col-xs-4 ">
+											<a class="_icon"><img src="img/front/person/j.png" alt="极客学院"></a>
+										</div>
+										<div class="col-md-9 col-sm-8 col-xs-8">
+											<div href="" class="list-group-item">
+												<b>花瓣</b><br /><p>发掘产品和趋势的价值</p>
+												<span class="badge on" title="添加订阅"></span>
+											</div>
+										</div>
+									</div>
+									<span class="more" id="pregroup"><b>上一页</b></span>
+								</div>
+								<script>
+									$(function() {
+										$('#nextgroup').click(function() {
+											$('#group-1').css('display', 'none');
+											$('#group-2').css('display', 'block');
+										});
+										$('#pregroup').click(function() {
+											$('#group-2').css('display', 'none');
+											$('#group-1').css('display', 'block');
+										});
+										$('.badge').click(function(){
+											alert('请先登录！');
+										});
+									});
+								</script>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--Tab end-->
+
+		<!--content start-->
+		<div id="content">
+			<div class="container">
+				<div class="row">
+					<div class="clo-md-4 col-sm-4 col-xs-4 ">
+						<div class="fisrthots">
+							<div class="section-title">
+								<a class="more nexthots">更多</a>
+								<h2>tfin小知识</h2>
+							</div>
+							<!--one -->
+							<div id="newBox">
+								<h4>人口雪崩！中国生育水平已是全球最低</h4>
+								<div class="newTit">
+									<div class="newImg"><img src="img/front/new2.jpg" /></div>
+									<div class="newTxt"> 2016凤凰国际论坛洪秀柱访大陆，两岸僵局仍难破六成中国调查者对环境质量不满敢查朴槿惠，两岸僵局仍难破六成中国调查者对环境质量不满敢查朴槿惠韩国检察官有多大权
+									</div>
+								</div>
+							</div>
+							<!--two -->
+							<div id="newBox">
+								<h4>美司令公开对特朗普唱反调 中国周边恐陷革命</h4>
+								<div class="newTit">
+									<div class="newImg"><img src="img/front/new2.jpg" /></div>
+									<div class="newTxt"> 2016凤凰国际论坛洪秀柱访大陆，两岸僵局仍难破六成中国调查者对环境质量不满敢查朴槿惠，韩国检察官有多大权
+									</div>
+								</div>
+							</div>
+							<!--three -->
+							<div id="newBox">
+								<h4>人口雪崩！中国生育水平已是全球最低</h4>
+								<div class="newTit">
+									<div class="newImg"><img src="img/front/new2.jpg" /></div>
+									<div class="newTxt"> 2016凤凰国际论坛洪秀柱访大陆，两岸僵局仍难破六成中国调查者对环境质量不满敢查朴槿惠，韩国检察官有多大权
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="secondhots">
+							<div class="section-title">
+								<a class="more back">返回</a>
+								<h2>tfin小知识</h2>
+							</div>
+							<!--one -->
+							<div id="newBox">
+								<h4>马云：未来三十年属于“用好互联网技术”的人</h4>
+								<div class="newTit">
+									<div class="newImg"><img src="img/front/new1.jpg" /></div>
+									<div class="newTxt"> 2016凤凰国际论坛洪秀柱访大陆，两岸僵局仍难破六成中国调查者对环境质量不满敢查朴槿惠，两岸僵局仍难破六成中国调查者对环境质量不满敢查朴槿惠韩国检察官有多大权
+									</div>
+								</div>
+							</div>
+							<!--two -->
+							<div id="newBox">
+								<h4>马云：未来三十年属于“用好互联网技术”的人</h4>
+								<div class="newTit">
+									<div class="newImg"><img src="img/front/new1.jpg" /></div>
+									<div class="newTxt"> 2016凤凰国际论坛洪秀柱访大陆，两岸僵局仍难破六成中国调查者对环境质量不满敢查朴槿惠，韩国检察官有多大权
+									</div>
+								</div>
+							</div>
+							<!--three -->
+							<div id="newBox">
+								<h4>人口雪崩！中国生育水平已是全球最低</h4>
+								<div class="newTit">
+									<div class="newImg"><img src="img/front/new1.jpg" /></div>
+									<div class="newTxt"> 2016凤凰国际论坛洪秀柱访大陆，两岸僵局仍难破六成中国调查者对环境质量不满敢查朴槿惠，韩国检察官有多大权
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<script>
+						$('.nexthots').click(function() {
+							$('.fisrthots').css('display', 'none');
+							$('.secondhots').css('display', 'block');
+						});
+						$('.back').click(function() {
+							$('.secondhots').css('display', 'none');
+							$('.fisrthots').css('display', 'block');
+						});
+					</script>
+
+					<div class="clo-md-4 col-sm-4 col-xs-4">
+						<div class="section-title">
+							<h2>热搜排行</h2>
+						</div>
+						<div class="hotsrank">
+							<ul class="rank-list">
+								<li>
+									<span class="blue_q">1</span>
+									<a href="" target="_blank" title="美媒：发动机难仿制 俄罗斯乐见中国继续进口">美媒：发动机难仿制 俄罗斯乐见中国继续进口</a>
+								</li>
+								<li>
+									<span class="blue_q">2</span>
+									<a href="" target="_blank" title="美媒：发动机难仿制 俄罗斯乐见中国继续进口">美媒：发动机难仿制 俄罗斯乐见中国继续进口</a>
+								</li>
+								<li>
+									<span class="blue_q">3</span>
+									<a href="" target="_blank" title="美媒：发动机难仿制 俄罗斯乐见中国继续进口">美媒：发动机难仿制 俄罗斯乐见中国继续进口</a>
+								</li>
+								<li>
+									<span class="">4</span>
+									<a href="" target="_blank" title="美媒：发动机难仿制 俄罗斯乐见中国继续进口">美媒：发动机难仿制 俄罗斯乐见中国继续进口</a>
+								</li>
+								<li>
+									<span class="">5</span>
+									<a href="" target="_blank" title="美媒：发动机难仿制 俄罗斯乐见中国继续进口">美媒：发动机难仿制 俄罗斯乐见中国继续进口</a>
+								</li>
+								<li>
+									<span class="">6</span>
+									<a href="" target="_blank" title="美媒：发动机难仿制 俄罗斯乐见中国继续进口">美媒：发动机难仿制 俄罗斯乐见中国继续进口</a>
+								</li>
+								<li>
+									<span class="">7</span>
+									<a href="" target="_blank" title="美媒：发动机难仿制 俄罗斯乐见中国继续进口">美媒：发动机难仿制 俄罗斯乐见中国继续进口</a>
+								</li>
+								<li>
+									<span class="">8</span>
+									<a href="" target="_blank" title="美媒：发动机难仿制 俄罗斯乐见中国继续进口">美媒：发动机难仿制 俄罗斯乐见中国继续进口</a>
+								</li>
+								<li>
+									<span class="">9</span>
+									<a href="" target="_blank" title="美媒：发动机难仿制 俄罗斯乐见中国继续进口">美媒：发动机难仿制 俄罗斯乐见中国继续进口</a>
+								</li>
+								<li>
+									<span class="">10</span>
+									<a href="" target="_blank" title="美媒：发动机难仿制 俄罗斯乐见中国继续进口">美媒：发动机难仿制 俄罗斯乐见中国继续进口</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="clo-md-4 col-sm-4 col-xs-4">
+						<div class="section-title">
+							<h2>书籍推荐</h2>
+						</div>
+						<div class="rank-list">
+							<div class="book-list">
+								<a href="">
+									<img src="img/front/book1.jpg" alt="" />
+									<span>给大家看的设计书</span>
+								</a>
+								<a href="">
+									<img src="img/front/book2.jpg" alt="" />
+									<span>给大家看的设计书</span>
+								</a>
+							</div>
+							<div class="book-list">
+								<a href="">
+									<img src="img/front/book3.jpg" alt="" />
+									<span>给大家看的设计书</span>
+								</a>
+								<a href="">
+									<img src="img/front/book4.jpg" alt="" />
+									<span>给大家看的设计书</span>
+								</a>
+							</div>
+							<div class="book-list">
+								<a href="">
+									<img src="img/front/book5.jpg" alt="" />
+									<span>给大家看的设计书</span>
+								</a>
+								<a href="">
+									<img src="img/front/book5.jpg" alt="" />
+									<span>给大家看的设计书</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--content end-->
+
+		<!--frinendlink start-->
+		<div id="gundong">
+			<div class="container">
+				<div class="row">
+					<div class="gundong-wrap" id="IDwrap">
+						<img src="img/front/friendlink.png" />
+						<div class="v_list">
+							<ul class="v_scroll">
+								<li>
+									<a><img src="img/front/friend01.png" class="img-responsive" /></a>
+								</li>
+								<li>
+									<a><img src="img/front/friend02.png" class="img-responsive" /></a>
+								</li>
+								<li>
+									<a><img src="img/front/friend03.png" class="img-responsive" /></a>
+								</li>
+								<li>
+									<a><img src="img/front/friend04.png" class="img-responsive" /></a>
+								</li>
+								<li>
+									<a><img src="img/front/friend05.png" class="img-responsive" /></a>
+								</li>
+								<li>
+									<a><img src="img/front/friend01.png" class="img-responsive" /></a>
+								</li>
+								<li>
+									<a><img src="img/front/friend02.png" class="img-responsive" /></a>
+								</li>
+								<li>
+									<a><img src="img/front/friend03.png" class="img-responsive" /></a>
+								</li>
+								<li>
+									<a><img src="img/front/friend04.png" class="img-responsive" /></a>
+								</li>
+								<li>
+									<a><img src="img/front/friend05.png" class="img-responsive" /></a>
+								</li>
+								<li>
+									<a><img src="img/front/friend01.png" class="img-responsive" /></a>
+								</li>
+								<li>
+									<a><img src="img/front/friend02.png" class="img-responsive" /></a>
+								</li>
+							</ul>
+						</div>
+						<a class="prev"><i class="i_prev"></i></a>
+						<a class="next"> <i class="i_next"></i></a>
+					</div>
+					<!--roll-->
+				</div>
+				<!--row-->
+			</div>
+			<!--container-->
+		</div>
+		<script type="text/javascript">
+			var i = 0;
+			$(".prev").click(function() {
+				i++;
+				if(i > 1) {
+					i = 0;
+				}
+				$(".v_scroll").animate({
+					"left": -1014 * i + "px"
+				}, 1500);
+			})
+			$(".next").click(function() {
+				i++;
+				if(i > 1) {
+					i = 0;
+				}
+				$(".v_scroll").animate({
+					"left": -1014 * i + "px"
+				}, 1500);
+			})
+		</script>
+		<!--frinendlink end-->
+
+		<!--footer start-->
+		<footer>
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-sm-12 col-md-12" id="left">
+						<div class="footer_nav">
+							<ul>
+								<li>首页</li>
+								<li>个人中心</li>
+								<li>关于我们</li>
+								<li>用户须知</li>
+							</ul><br />
+							<p>Copy All Right @ 广东技术师范学院 All rights reserved.</p>
+							<p>地址：广州市天河区中山大道西293号</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!--footer end-->
+</div>
+	</body>
+
+</html>

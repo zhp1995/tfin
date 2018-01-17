@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>登录提醒</title>
+		<style>
+			html,body {
+				width: 100%;
+				font-family: "微软雅黑";
+			}
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.bg {
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				z-index: -1;
+			}
+			
+			.bg img {
+				width: 100%;
+				height: 100%;
+			}
+			ul{
+				height: 30px;
+				position: absolute;
+				right: 10px;
+				top: 0;
+			}
+			ul li {
+				height: 30px;
+				float: left;
+				list-style: none;
+				margin: 10px;
+			}
+			
+			a {
+				color: blue;
+			}			
+		</style>
+	</head>
+
+	<body>
+		<div class="bg">
+			<img src=" img/front/error.jpg" alt="" />
+		<ul>
+			<li>
+				<a href="regist.html">注册</a>
+			</li>
+			<li>
+				<a href="login.html">登录</a>
+			</li>
+			<li>
+				<a href="index.html">返回首页</a>
+			</li>
+		</ul>
+		</div>
+		
+
+	</body>
+
+</html>

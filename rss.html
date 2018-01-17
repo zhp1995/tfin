@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>rss新闻</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap3.2.0/front/css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/front/common.css" />
+	<link rel="stylesheet" type="text/css" href="css/front/person.css" />
+	<link rel="stylesheet" type="text/css" href="css/front/search.css" />
+	<script src="bootstrap3.2.0/front/js/jquery-1.11.0.min.js"></script>
+	<script src="bootstrap3.2.0/front/js/bootstrap.js"></script>
+</head>
+
+<body>
+<div class="wrap">
+	<!--header start-->
+	<header>
+		<nav class="navbar-inverse" id="_nav">
+			<div class="container">
+				<div class="navbar-header">
+					<button class="navbar-toggle" data-toggle="collapse" data-target="#responsive-navbar">				
+						<span class="icon-bar"></span>  
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>	
+					</button>
+					<a href="#" class="navbar-brand" id="_logo"><img src="img/front/_logo.png" /></a>
+					<a href="#" class="navbar-brand" id="_tfin">tfin阅读</a>
+				</div>
+
+				<div class="collapse navbar-collapse " id="responsive-navbar">
+					<ul class="nav navbar-nav" id="menubox">
+						<li class="active">
+							<a href="index.html" target="_blank">首页</a>
+						</li>
+						<li>
+							<a href="person.html" target="_blank">个人中心</a>
+						</li> 
+						<li>
+							<a href="">关于我们</a>
+						</li>
+					</ul>
+					<select class="navbar-form navbar-left" id="nav-select">
+						<option value="xinwen">新闻</option>
+					</select>
+					<form action="" class="navbar-form navbar-left" id="search-form">
+						<input type="text" placeholder="搜索" class="form-control" />
+						<button type="submit" onclick="window.open('search.html')">
+						<span class="glyphicon glyphicon-search"></span>
+					</button>
+					</form>
+					<div class="profile navbar-right">
+						<ul class="nav navbar-nav" id="right-menu">
+							<li>
+								<a href="login.html">登录</a>
+							</li>
+							<li>
+								<a href="regist.html">注册</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</nav>
+	</header>
+	<!--header end-->
+
+	<div class="collect-main">
+		<div class="container">
+			<div class="meta">
+				<div class="dash-line"></div>
+				<div class="meta-info"><h2 class="tip">收藏的文章</h2>
+				</div>
+			</div>
+	<!--news start-->
+		<div id="search-content">
+			<div class="container">
+				
+				<div id="main-pager"> <!--翻页 -->
+					<div class="m-page">
+							<div class="inner">
+								<div class="total">共 3 页</div>
+								<ul class="items">
+									<li class="item prev">
+										<span>上一页</span>
+									</li>
+									<li class="item active">
+										<span class="num">1</span>
+									</li>
+									<li class="item">
+										<a class="num" href="#" >2</a>
+									</li>
+									<li class="item">
+										<a class="J_Ajax num">3</a>
+									</li>
+									<li class="item">
+										<a class="J_Ajax num" >4</a>
+									</li>
+									<li class="item">
+										<a class="J_Ajax num" >5</a>
+									</li>
+									<li class="item dot">...</li>
+									<li class="item next">
+										<a class="J_Ajax num icon-tag" href="#" >
+											<span>下一页</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--news end-->
+	</div>
+	<!--footer start-->
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-12" id="left">
+					<div class="footer_nav">
+						<ul>
+							<li>首页</li>
+							<li>个人中心</li>
+							<li>关于我们</li>
+							<li>用户须知</li>
+						</ul><br />
+						<p>Copy All Right @ 广东技术师范学院 All rights reserved.</p>
+						<p>地址：广州市天河区中山大道西293号</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!--footer end-->
+	<script>
+		$(function() {
+			$('div#close-attention').hover(function() {
+				var z = $(this).index();
+				$(this).find('.close-attention').css('display', 'block');
+			}, function() {
+				$('.close-attention').css('display', 'none');
+			});
+		});
+	</script>
+</div>
+</body>
+
+</html>

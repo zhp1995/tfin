@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>注册</title>
+		<link rel="stylesheet" type="text/css" href="css/front/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/front/login.css"/>
+		<link rel="stylesheet" type="text/css" href="css/front/regist.css"/>
+		<script src="js/front/jquery-1.10.2.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/front/intlTelInput.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/front/xie.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/front/login.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div class="container-fluid forall">
+			<div class="row " id="login">
+				<!--左边-->
+				<div class="col-sm-2 col-md-2 col-lg-2 "></div>		
+				<!--中间-->
+				<div class="col-sm-8 col-md-8 col-lg-8 " >
+					<div class="container-fluid" id = "main">
+						<div class="row header">
+							<div class="col-lg-3 col-md-3 col-sm-4 col-xs-6"><span id = "hetext"></span></div>
+							<div class="col-lg-6 col-md-6 col-sm-4 col-xs-0"></div>
+							<div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+								<a href="index.html">首页</a><a id ="regist" href="login.html">登录</a> 
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-lg-2 col-sm-1 col-md-1 col-xs-1"></div>			<!--内左-->
+							<div class="col-lg-8 col-sm-10 col-md-10 col-xs-10 all">
+								<div class="row logo">									<!--logo标志上-->
+										<img src="img/front/login/logo1.png"/>
+										<span id="title">tfin阅读</span>
+								</div>	
+								<div class="row login inputpanel">							<!--中-->
+									<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+									<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+											<div class="row fortop">	<!--输入框-->
+												<div class="row registway">
+													<span>注册</span>
+												</div>
+												<div class="input-group inputBox">
+												       <div id="messageError" class="messageError" style="z-index: 999; width: 100%;border: 1px solid black; border-radius: 10px; height: 30px;background-color: #CCCCCC;color: red;display: none;"></div>
+											           <div class="registEmi">注册手机号  </div>&nbsp;
+												       <div class="parentCls">
+															<input type="text" class="inputElem" placeholder="请输入手机号" id = "phoneNum" maxlength="11">
+													  </div>
+												</div>
+											    <div class="input-group inputBox">登录密码&nbsp;
+											      	<input type="password" name="phonePsw" id="phonePsw" class="password" value="" placeholder="请输入密码" maxlength="6"/>
+												</div>
+											</div>
+										    <div class="row">
+										    	 <div class="form-group inputBox code">
+										    	 	<div style="float: left;">验证码&nbsp;&nbsp;
+										    	 		<input type="text" name="" id="yanzhenma" class="yanzhenma" value="" />
+										    	 	</div>
+							                        <span class="coderight" id="coderight"></span>
+							                        <a class="chang" id="chang">&nbsp;&nbsp;&nbsp;换一张</a>
+							                     </div>
+										    </div>
+										    <div class="row ">
+										    	<div class="input-group inputBox agreecheck">
+													<input type="checkbox" name="checkbox" id="checkbox" />我已经阅读并同意遵守<a href="#">&lt;&lt;tfin用户服务协议&gt;&gt;</a>	
+												</div>	
+										    </div>
+											<div class="row ">
+												<div class="input-group inputBox agree">
+													<button class="agreeButton" id="agreeRegist">注册</button>
+												</div>	
+											</div>
+									</div>
+									<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+								</div>
+							
+							</div>
+							<div class="col-lg-1 col-sm-1 col-md-1 col-xs-1"></div>			<!--内右边-->
+						</div>
+						
+					</div>
+				</div>
+				 <!--右边-->
+				<div class="col-sm-2 col-md-2 col-lg-2 "></div>		
+			</div>
+		</div>
+	</body>
+</html>

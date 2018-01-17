@@ -1,0 +1,130 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>详情页</title>
+		
+		<link rel="stylesheet" type="text/css" href="bootstrap3.2.0/front/css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/front/index.css" />
+		<link href="detail_style.css" rel="stylesheet" type="text/css" />
+		<script src="bootstrap3.2.0/front/js/jquery-1.11.0.min.js"></script>
+		<script src="bootstrap3.2.0/front/js/bootstrap.js"></script>
+	</head>
+
+	<body>
+		<!--header start-->
+		<header>
+			<nav class="navbar navbar-inverse navbar-fixed-top" id="_nav">
+				<div class="container">
+					<div class="navbar-header">
+						<button class="navbar-toggle" data-toggle="collapse" data-target="#responsive-navbar">				
+						<span class="icon-bar"></span>  
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>	
+					</button>
+						<a href="#" class="navbar-brand" id="_logo"><img src="img/front/_logo.png" /></a>
+						<a href="#" class="navbar-brand" id="_tfin">tfin阅读</a>
+					</div>
+
+					<div class="collapse navbar-collapse " id="responsive-navbar">
+						<ul class="nav navbar-nav" id="menubox">
+							<li class="active">
+								<a href="">首页</a>
+							</li>
+							<li>
+								<a href="person.html" target="_blank">个人中心</a>
+							</li>
+							<li>
+								<a href="">关于我们</a>
+							</li>
+						</ul>
+						<select class="navbar-form navbar-left" id="nav-select">
+							<option value="xinwen">新闻</option>
+							<!--<option value="fayunaren">发源人</option>
+							<option value="zuozhe">作者</option>-->
+						</select>
+						<form action="" class="navbar-form navbar-left" id="search-form">
+							<input type="text" placeholder="搜索" class="form-control" />
+							<button type="submit">
+						<span class="glyphicon glyphicon-search"></span>
+					</button>
+						</form>
+
+						<div class="profile navbar-right">
+							<ul class="nav navbar-nav" id="right-menu">
+								<li>
+									<a href="login.html">登录</a>
+								</li>
+								<li>
+									<a href="regist.html">注册</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</nav>
+		</header>
+		<!--header end-->
+		
+		<div class="box">
+			<div class="header">
+				<h2>设计狮</h2>
+				<h4>小交互细节如何显著提高用户体验</h4>
+				<p class="source">2016-03-07 来源：人人都是产品经理</p>
+			</div>
+			<div class="main">
+				<div class="banner"> <img src="images/img_03.png"> </div>
+				<p class="content">我们常常会用Photoshop和Sketch这一类软件来设计数字产品。大多数在这个行业工作过几年的人都应该知道设计不仅仅是视觉传达而已。尽管如此，还是有许多人在进行静态的设计。对于设计，乔布斯就说过这样的话：“设计并非外观怎样，感觉如何。设计的是产品的工作原理。”</p>
+				<p class="content">我们对产品的体验和印象是由综合因素影响的，其中交互起着根本性的作用。我们再也不能先从静态的角度考虑用户界面，然后再加入交互效果。相反，我们需要从一开始就考虑到互动，并把这个当作界面的天然属性。</p>
+				<div class="btn-zan"> <img id="zan-off" src="images/btn_zan02_nor.png"> <img id="zan-on" src="images/btn_zan02_sel.png"> </div>
+			</div>
+		</div>
+		<p class="space"></p>
+
+		<div class="box">
+			<p class="title">相似推荐</p>
+			<a href="details.html">
+				<div class="list">
+					<left>推荐！交互设计的那些事（一）</left>
+					<div class="listimg"></div>
+				</div>
+			</a>
+			<a href="details.html">
+				<div class="list">
+					<left>推荐！交互设计的那些事（二）</left>
+					<div class="listimg"></div>
+				</div>
+			</a>
+			<a href="details.html">
+				<div class="list">
+					<left>推荐！交互设计的那些事（三）</left>
+					<div class="listimg"></div>
+				</div>
+			</a>
+			<a href="details.html">
+				<div class="list">
+					<left>新人进阶之路！聊聊作为交互设计师第三天后的经验和思考</left>
+					<div class="listimg"></div>
+				</div>
+			</a>
+		</div>
+		<script type="text/javascript" src="jquery-1.11.3.js"></script>
+		<script type="text/javascript">
+			$().ready(function() {
+				var offBtn = $("#zan-off");
+				var onBtn = $("#zan-on");
+				offBtn.click(function() {
+					$(this).hide();
+					onBtn.show();
+				});
+				onBtn.click(function() {
+					$(this).hide();
+					offBtn.show();
+				})
+			});
+		</script>
+	</body>
+
+</html>

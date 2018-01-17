@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>登录</title>
+		<link rel="stylesheet" type="text/css" href="css/front/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/front/login.css"/>
+		<script src="js/front/jquery-1.10.2.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/front/xie.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/front/login.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div class="container-fluid">
+			<div class="row " id="login">
+				<!--左边-->
+				<div class="col-sm-2 col-md-2 col-lg-2 col-xs-1"></div>		
+				<!--中间-->
+				<div class="col-sm-8 col-md-8 col-lg-8 col-xs-10" >
+					<div class="container-fluid" id = "main">
+						<div class="row header">
+							<div class="col-lg-3 col-md-3 col-sm-4 col-xs-6"><span id = "hetext"></span></div>
+							<div class="col-lg-6 col-md-6 col-sm-4 col-xs-0"></div>
+							<div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+								<a href="index.html">首页</a><a id ="regist" href="regist.html">注册</a> 
+							</div>
+						</div>
+						
+						<div class="row shuru">
+							<div class="col-lg-2 col-sm-1 col-md-1 col-xs-1"></div>			<!--内左-->
+							<div class="col-lg-8 col-sm-10 col-md-10 col-xs-10 all">
+								<div class="row logo">									<!--logo标志上-->
+										<img src="img/front/login/logo1.png"/>
+										<span id="title">tfin阅读</span>
+								</div>	
+								<div class="row login inputpanel" id = "inputpanel">							<!--中-->
+									<div class="col-lg-2 col-md-2 col-sm-1 col-xs-1"></div>
+									<div class="col-lg-8 col-md-8 col-sm-10 col-xs-10">
+											<div class="row loginway">
+												<span>登录</span>
+											</div>
+										    <!--输入框-->
+											<div class="row"> 
+												<div id="messageError" class="messageError" style="z-index: 999; width: 100%;border: 1px solid black; border-radius: 10px; height: 30px;background-color: #CCCCCC;color: red;display: none;"></div>
+												<div class="input-group inbor">
+												      <span class="input-group-addon imgchang" id="basic-addon1"><img src="img/front/login/input.png"/></span>
+												      <div class="parentCls">
+															<input type="text" class="inputElem" id = "phoneNum" name="number" placeholder="请输入手机号" maxlength="11">
+													  </div>
+												  </div>	
+											      <div class="input-group inbor">
+												      <span class="input-group-addon imgchang" id="basic-addon1"><img src="img/front/login/pwd.png"/></span>
+												      <input type="password" class="form-control intchang" id = "phonePsw" placeholder="请输入6位密码" maxlength="6" aria-describedby="basic-addon1">
+												  </div>
+											</div>
+										    <div class="row">
+										    	 <div class="form-group inbor">
+							                          <input type="text" class="form-control codeleft " id = "yanzhenma" placeholder="请输入验证码">&nbsp;&nbsp;
+							                          <span class="coderight" id="coderight"></span>
+							                          <a class="chang" id="chang">&nbsp;&nbsp;&nbsp;换一张</a>
+							                      </div>
+										    </div>				
+										    <!--验证码输入-->
+										    <div class="row">
+												<div class="col-md-3 logbtn">
+								                      <button type="submit" class="btn btn-warning btn-block" id="btn-login" >登陆</button>
+								                      
+								                 </div>
+											</div>
+											<div class="row">
+										    	 <div class="forget">
+												  	<a>忘记密码？</a>
+												  </div>
+										    </div>
+										    <div class="form-forget">
+											    <form>
+													<p><label>用户名：</label><input type="text" name="username " value="用户名 " ></p>
+													<p><label>手机号：</label><input type="text" name="callnumber " value="手机号 "></p>
+													<p><label>&nbsp;&nbsp;&nbsp;邮箱：</label><input type="text" name="email" value="邮箱 "></p>
+													<p>
+														<button class="form-submit" id="" type="submit" >提交</button>
+														<button class="form-close" id="close" type="" onclick="closeDiv()">关闭</button>
+													</p>
+												</form>
+											</div>
+											<script>
+												$(function(){
+													$('.forget a').click(function(){
+														$('.form-forget').css('display','block');
+													});
+													$('#close').click(function(){
+														$('.form-forget').css('display','none');
+													});
+													$('.form-submit').click(function(){
+														$('.form-forget').css('display','none');
+													});
+												});
+											</script>
+										    
+										    
+											<div class="row">
+												<div class="regist">
+								                  	您还没tfin的账号哦，快去<a id="regist2" href="regist.html">免费注册</a>吧！
+								                  </div>
+								                  <div ><a href="#">您也可以通过第三方登录到tfin阅读哦</a></div>
+								                  <div class = "social">
+								                  		<div ><img src="img/front/login/weibo.png"/>&nbsp;QQ</div>
+								                  		<div ><img src="img/front/login/qq.png"/>&nbsp;新浪微博</div>
+								                  		<div ><img src="img/front/login/people.png"/>&nbsp;人人网</div>
+								                  </div>
+											</div>
+									</div>
+								</div>
+								</div>	
+							<div class="col-lg-2 col-sm-1 col-md-1 col-xs-1"></div>			<!--内右边-->
+						</div>
+					</div>
+				</div>
+				 <!--右边-->
+				<div class="col-sm-2 col-md-2 col-lg-2 col-xs-1"></div>		
+			</div>
+		</div>
+		
+	</body>
+</html>
